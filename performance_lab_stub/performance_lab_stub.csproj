@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CE302DD-64FC-41C9-8174-6E09C05F1D4E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>performance_lab_stub</RootNamespace>
+    <AssemblyName>performance_lab_stub</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="performance_lab.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\sorting\sorting.csproj">
+      <Project>{D9BE9DA0-A313-4F1F-AB3A-8EF17364BE9C}</Project>
+      <Name>sorting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\searching\searching.csproj">
+      <Project>{ED752864-8025-47E1-8C27-563A925C73A6}</Project>
+      <Name>searching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\binary_searching\binary_searching.csproj">
+      <Project>{2A83AC71-1BE9-42E4-841C-2C906AC239B7}</Project>
+      <Name>binary_searching</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

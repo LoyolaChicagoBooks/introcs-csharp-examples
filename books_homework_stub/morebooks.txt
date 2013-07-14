@@ -1,0 +1,15 @@
+A History of Modern Computing
+Paul E. Ceruzzi
+2003
+Tools for Thought
+Howard Rheingold
+2000
+Data Structures and Algorithms
+Peter Drake
+2005
+C# Yellow Book
+Rob Miles
+2011
+Object-Oriented Computation in C++ and Java
+Conrad Weisert
+2007

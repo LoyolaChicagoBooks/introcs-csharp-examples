@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3AB6647B-77BB-4662-96A8-906FCF233D78}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>cs_project1</RootNamespace>
+    <AssemblyName>cs_project1</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="command_mapper.cs" />
+    <Compile Include="command.cs" />
+    <Compile Include="game.cs" />
+    <Compile Include="goer.cs" />
+    <Compile Include="helper.cs" />
+    <Compile Include="place.cs" />
+    <Compile Include="quitter.cs" />
+    <Compile Include="text_util.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="place_data.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ui\ui.csproj">
+      <Project>{6A581A4A-8492-46E7-8F21-9D8F17D104F4}</Project>
+      <Name>ui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\fio\fio.csproj">
+      <Project>{3ED502C8-557A-4E6E-9C23-653DB4C3BF52}</Project>
+      <Name>fio</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

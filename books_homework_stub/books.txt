@@ -1,0 +1,19 @@
+C# Yellow Book
+Rob Miles
+2011
+
+C# Software Solutions
+John Lewis
+2007
+
+A History of Modern Computing
+Paul E. Ceruzzi
+2003
+
+Universal History of Computing
+Georges Ifrah
+2001
+
+Tools for Thought
+Howard Rheingold
+2000

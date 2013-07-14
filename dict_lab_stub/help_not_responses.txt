@@ -1,0 +1,51 @@
+crash
+Well, it never crashes on our system. 
+It must have something to do with your system. 
+Tell me more about your configuration.
+
+slow
+I think this has to do with your hardware. 
+Upgrading your processor should solve all 
+performance problems. 
+Have you got a problem with our software?
+
+performance
+Performance was quite adequate in all our tests. 
+Are you running any other processes in the background?
+
+bug
+Well, you know, all software has some bugs. 
+But our software engineers are working very hard to fix them. 
+Can you describe the problem a bit further?
+
+windows
+This is a known bug to do with the Windows 
+operating system.  Please report it to Microsoft. 
+There is nothing we can do about this.
+
+macintosh
+This is a known bug to do with the Mac 
+operating system.  Please report it to Apple. 
+There is nothing we can do about this.
+
+expensive
+The cost of our product is quite competitive. 
+Have you looked around and really compared our features?
+
+installation
+The installation is really quite straight forward. 
+We have tons of wizards that do all the work for you. 
+Have you read the installation instructions?
+
+memory
+If you read the system requirements carefully, 
+you will see that the specified memory requirements 
+are 1.5 gigabytes.  You really should upgrade your memory. 
+Anything else you want to know?
+
+linux
+We take Linux support very seriously. 
+But there are some problems.
+Most have to do with incompatible glibc versions. 
+Can you be a bit more precise?
+

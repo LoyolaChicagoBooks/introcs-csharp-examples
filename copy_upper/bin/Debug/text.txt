@@ -1,0 +1,4 @@
+CopyUpper text data
+
+This is some text.
+Is it all upper case?
