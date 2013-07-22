@@ -6,7 +6,7 @@ namespace uifnt
    {
       public static void Main()
       {
-         var n = UIFNT.PromptUnsignedInt("Gimme an unsigned: ");
+         var n = UIFNT.PromptInt("Gimme an integer: ");
          Console.WriteLine("Thank you for entering " + n);
       }
    }
