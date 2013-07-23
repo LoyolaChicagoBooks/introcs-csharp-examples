@@ -6,32 +6,48 @@ namespace uifnt
 {
    public class UIFNT
    {
-      public static int PromptUnsignedInt(string prompt)
+      public static Regex intAccept = new Regex(@"^[\+-]?\d*$");
+
+      /*
+       * Explanation of validation regex for integers
+       * 
+       *    ^           match beginning of string (the candidate number)
+       *    [\+-]       optional sign
+       *    \d+         match 1 or more digits (\d); note that the 1st parameter uses \d* to allow zero or more until we build the full string
+       *    $           match the end of string (to make sure there is no extraneous input)
+       */
+
+      public static Regex intValidate = new Regex(@"^[\+-]?\d+$");
+      public static Regex digitsAccept = new Regex(@"^\d*$");
+      public static Regex digitsValidate = new Regex(@"^\d+$");
+      public static Regex decimalAccept = new Regex(@"^[\+-]?\d*(\.)?\d*$");
+
+      /*
+       * Explanation of validation regex for decimals
+       *    ^
+       *    [\+-]?              similar to integer; allow + or - at beginning only
+       *    (                   we use grouping to ensure one of the following apply
+       *      ((\d*(\.)?\d+))   either there is a positive number of digits after an optional decimal point
+       *      |                    - or -
+       *      (\d+(\.)?\d*)     there is a positive number of digits before the optional decimal point
+       *    )
+       *    $                   end of string
+       * 
+       *    Note: If the decimal point is missing, this is ok;
+       *    it means that the expression \d+\d* or \d*\d+ is being tested (to ensure a positive number of digits overall!
+       */
+
+      public static Regex decimalValidate = new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$");
+      public static Regex doubleAccept = new Regex(@"^[\+-]?\d*(\.)?\d*$");  // TODO: Add exponentiation (current ui library only supports decimal syntax!)
+      public static Regex doubleValidate = new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$");
+
+      public static string PromptLine(string prompt)
       {
-
-         var digits = new StringBuilder(10, 100);
          Console.Write(prompt);
-         // read digits only 
-         while (true) {
-            var key = Console.ReadKey(true);
-            if (key.Key == ConsoleKey.Enter)
-               break;
-
-            if (key.Key == ConsoleKey.Backspace && digits.Length > 0) {
-                  digits.Remove(digits.Length - 1, 1);
-                  Console.Write("\b");
-            }
-
-            if (key.KeyChar >= '0' && key.KeyChar <= '9') {
-               Console.Write(key.KeyChar);
-               digits.Append(key.KeyChar);
-            }
-         }
-         Console.WriteLine("Parsing " + digits.ToString());
-         return int.Parse(digits.ToString());
+         return Console.ReadLine();
       }
 
-      public static String AcceptInput(Regex accept, Regex validate) {
+      private static String AcceptInput(Regex accept, Regex validate) {
          var inputChars = new StringBuilder(10, 100);
          while (true) {
             var key = Console.ReadKey(true);
@@ -56,38 +72,75 @@ namespace uifnt
          return inputChars.ToString();
       }
 
+
+      public static int PromptUnsignedInt(string prompt)
+      {
+         Console.Write(prompt);
+         return int.Parse(AcceptInput(digitsAccept, digitsValidate));
+      }
+
+
       public static int PromptInt(string prompt)
       {
          Console.Write(prompt);
-         /*
-          * Explanation of validation Regex (2nd parameter)
-          *    ^           match beginning of string (the candidate number)
-          *    [\+-]?      match + or - at the beginning of string (+ is part of Regex syntax, hence the escape 
-          *    \d+         match 1 or more digits (\d); note that the 1st parameter uses \d* to allow zero or more until we build the full string
-          *    $           match the end of string (to make sure there is no extraneous input)
-          */
-
-         return int.Parse(AcceptInput(new Regex(@"^[\+-]?\d*$"), new Regex(@"^[\+-]?\d+$")));
+         return int.Parse(AcceptInput(intAccept, intValidate));
       }
 
       public static decimal PromptDecimal(string prompt) {
          Console.Write(prompt);
-         /*
-          * Explanation of validation Regex (2nd parameter)
-          *    ^
-          *    [\+-]?              similar to integer; allow + or - at beginning only
-          *    (                   we use grouping to ensure one of the following apply
-          *      ((\d*(\.)?\d+))   either there is a positive number of digits after an optional decimal point
-          *      |                    - or -
-          *      (\d+(\.)?\d*)     there is a positive number of digits before the optional decimal point
-          *    )
-          *    $                   end of string
-          * 
-          *    Note: If the decimal point is missing, this is ok;
-          *    it means that the expression \d+\d* or \d*\d+ is being tested (to ensure a positive number of digits overall!
-          */
-         return decimal.Parse(AcceptInput(new Regex(@"^[\+-]?\d*(\.)?\d*$"), new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$")));
+         return decimal.Parse(AcceptInput(decimalAccept, decimalValidate));
       }
+
+      public static double PromptDouble(string prompt) {
+         Console.Write(prompt);
+         return double.Parse(AcceptInput(doubleAccept, doubleValidate));
+      }
+
+      public static int PromptIntInRange(string prompt, 
+                                         int lowLim, int highLim)
+      {
+         string longPrompt = string.Format("{0} ({1} through {2}) ",
+                                           prompt, lowLim, highLim);
+         int number = PromptInt(longPrompt);
+         while (number < lowLim || number > highLim) {
+            Console.WriteLine("{0} is out of range!", number);
+            number = PromptInt(longPrompt);
+         }
+         return number;
+      }
+
+      public static double PromptDoubleInRange(string prompt, 
+                                               double lowLim, double highLim)
+      {
+         string longPrompt = string.Format("{0} ({1} through {2}) ",
+                                           prompt, lowLim, highLim);
+         double number = PromptDouble(longPrompt);
+         while (number < lowLim || number > highLim) {
+            Console.WriteLine("{0} is out of range!", number);
+            number = PromptDouble(longPrompt);
+         }
+         return number;
+      }
+
+      public static bool Agree(string prompt)
+      {
+         Console.Write(prompt);
+         // TODO: This can be ReadKey() as well and only terminates for Y/N/y/n (English).
+         return "y" == Console.ReadLine();
+      }
+                                                     
+      public static bool IsDigits(string s) {
+         return digitsValidate.IsMatch(s);
+      }
+                                                     
+      public static bool IsIntString(string s) {
+         return intAccept.IsMatch(s);
+      }
+                                                     
+      public static bool IsDecimalString(string s) {
+         return decimalAccept.IsMatch(s);
+      }
+
    }
 }
 
