@@ -31,45 +31,40 @@ namespace uifnt
          return int.Parse(digits.ToString());
       }
 
-      public static int PromptInt(string prompt)
-      {
-
-         var digits = new StringBuilder(10, 100);
-
-         // by flexible, I mean: What allows us to keep collecting sign and digits and still be valid?
-         // This allows + and - to be valid as long as we're still making progress toward an integer.
-         // Problem: May not get enough digits for int.Parse() to work.
-         var flexIntSyntax = new Regex(@"^[\+-]?\d*$");
-
-         // intParseSyntax enforces that there is at least one digit. If we required this in the loop,
-         // we couldn't incrementally build up the integer one character at a time, because + or - on its
-         // own would not be valid
-
-         var intParseSyntax = new Regex(@"^[\+-]?\d+$");
-         Console.Write(prompt);
-         // read digits only 
+      public static String AcceptInput(Regex accept, Regex validate) {
+         var inputChars = new StringBuilder(10, 100);
          while (true) {
             var key = Console.ReadKey(true);
             if (key.Key == ConsoleKey.Enter) {
-               if (intParseSyntax.IsMatch(digits.ToString()))
+               if (validate.IsMatch(inputChars.ToString()))
                   break;
             }
             else if (key.Key == ConsoleKey.Backspace) {
-               if (digits.Length > 0) {
-                  digits.Remove(digits.Length - 1, 1);
-                  Console.Write("\b");
+               if (inputChars.Length > 0) {
+                  inputChars.Remove(inputChars.Length - 1, 1);
+                  Console.Write("\b \b");
                }
             }
             else {
-               digits.Append(key.KeyChar);
-               if (flexIntSyntax.IsMatch(digits.ToString())) 
+               inputChars.Append(key.KeyChar);
+               if (accept.IsMatch(inputChars.ToString())) 
                   Console.Write(key.KeyChar);
                else
-                  digits.Remove(digits.Length - 1, 1);
+                  inputChars.Remove(inputChars.Length - 1, 1);
             } 
          }
+         return inputChars.ToString();
+      }
 
-         return int.Parse(digits.ToString());
+      public static int PromptInt(string prompt)
+      {
+         Console.Write(prompt);
+         return int.Parse(AcceptInput(new Regex(@"^[\+-]?\d*$"), new Regex(@"^[\+-]?\d+$")));
+      }
+
+      public static decimal PromptDecimal(string prompt) {
+         Console.Write(prompt);
+         return decimal.Parse(AcceptInput(new Regex(@"^[\+-]?\d*(\.)?\d*$"), new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$")));
       }
    }
 }
