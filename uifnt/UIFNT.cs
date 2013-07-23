@@ -38,8 +38,8 @@ namespace uifnt
        */
 
       public static Regex decimalValidate = new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$");
-      public static Regex doubleAccept = new Regex(@"^[\+-]?\d*(\.)?\d*$");  // TODO: Add exponentiation (current ui library only supports decimal syntax!)
-      public static Regex doubleValidate = new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$");
+      public static Regex doubleAccept = new Regex(@"^([\+-]?\d*(\.\d*)?|[\+-]?(\d+\.)\d*)((\d\.|\d)[eE][\+-]?\d*)?$");
+      public static Regex doubleValidate = new Regex(@"^([\+-]?\d+(\.\d*)?|[\+-]?\.\d+)([eE][\+-]?\d+)?$");
 
       public static string PromptLine(string prompt)
       {
