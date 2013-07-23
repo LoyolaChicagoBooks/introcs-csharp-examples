@@ -59,11 +59,33 @@ namespace uifnt
       public static int PromptInt(string prompt)
       {
          Console.Write(prompt);
+         /*
+          * Explanation of validation Regex (2nd parameter)
+          *    ^           match beginning of string (the candidate number)
+          *    [\+-]?      match + or - at the beginning of string (+ is part of Regex syntax, hence the escape 
+          *    \d+         match 1 or more digits (\d); note that the 1st parameter uses \d* to allow zero or more until we build the full string
+          *    $           match the end of string (to make sure there is no extraneous input)
+          */
+
          return int.Parse(AcceptInput(new Regex(@"^[\+-]?\d*$"), new Regex(@"^[\+-]?\d+$")));
       }
 
       public static decimal PromptDecimal(string prompt) {
          Console.Write(prompt);
+         /*
+          * Explanation of validation Regex (2nd parameter)
+          *    ^
+          *    [\+-]?              similar to integer; allow + or - at beginning only
+          *    (                   we use grouping to ensure one of the following apply
+          *      ((\d*(\.)?\d+))   either there is a positive number of digits after an optional decimal point
+          *      |                    - or -
+          *      (\d+(\.)?\d*)     there is a positive number of digits before the optional decimal point
+          *    )
+          *    $                   end of string
+          * 
+          *    Note: If the decimal point is missing, this is ok;
+          *    it means that the expression \d+\d* or \d*\d+ is being tested (to ensure a positive number of digits overall!
+          */
          return decimal.Parse(AcceptInput(new Regex(@"^[\+-]?\d*(\.)?\d*$"), new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$")));
       }
    }
