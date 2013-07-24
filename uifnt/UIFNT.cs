@@ -6,6 +6,10 @@ namespace uifnt
 {
    public class UIFNT
    {
+
+      private static string platform = Environment.OSVersion.Platform.ToString();
+      private static bool isWindows = platform.Contains("Win32");
+
       public static Regex intAccept = new Regex(@"^[\+-]?\d*$");
 
       /*
@@ -47,18 +51,26 @@ namespace uifnt
          return Console.ReadLine();
       }
 
+      // Needed to handle Windows inability to backspace properly. :-)
+
+      private static string BackspaceEcho() {
+         return isWindows ? "\b \b" : "\b";
+      }
+
       private static String AcceptInput(Regex accept, Regex validate) {
          var inputChars = new StringBuilder(10, 100);
          while (true) {
             var key = Console.ReadKey(true);
             if (key.Key == ConsoleKey.Enter) {
-               if (validate.IsMatch(inputChars.ToString()))
+               if (validate.IsMatch(inputChars.ToString())) {
+                  Console.WriteLine();
                   break;
+               }
             }
             else if (key.Key == ConsoleKey.Backspace) {
                if (inputChars.Length > 0) {
                   inputChars.Remove(inputChars.Length - 1, 1);
-                  Console.Write("\b \b");
+                  Console.Write(BackspaceEcho());
                }
             }
             else {
