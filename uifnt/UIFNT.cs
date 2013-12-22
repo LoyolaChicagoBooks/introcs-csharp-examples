@@ -2,8 +2,10 @@ using System;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace uifnt
+namespace IntroCS
 {
+   /// Fancier alternate to UI, that throws out illegal numeric input,
+   ///   character by character, using Console.ReadKey and regular expressions.
    public class UIFNT
    {
 
@@ -17,7 +19,8 @@ namespace uifnt
        * 
        *    ^           match beginning of string (the candidate number)
        *    [\+-]       optional sign
-       *    \d+         match 1 or more digits (\d); note that the 1st parameter uses \d* to allow zero or more until we build the full string
+       *    \d+         match 1 or more digits (\d); note that the 1st parameter 
+       *                uses \d* to allow zero or more until we build the full string
        *    $           match the end of string (to make sure there is no extraneous input)
        */
 
@@ -41,9 +44,12 @@ namespace uifnt
        *    it means that the expression \d+\d* or \d*\d+ is being tested (to ensure a positive number of digits overall!
        */
 
-      public static Regex decimalValidate = new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$");
-      public static Regex doubleAccept = new Regex(@"^([\+-]?\d*(\.\d*)?|[\+-]?(\d+\.)\d*)((\d\.|\d)[eE][\+-]?\d*)?$");
-      public static Regex doubleValidate = new Regex(@"^([\+-]?\d+(\.\d*)?|[\+-]?\.\d+)([eE][\+-]?\d+)?$");
+      public static Regex decimalValidate = 
+              new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$");
+      public static Regex doubleAccept = 
+              new Regex(@"^([\+-]?\d*(\.\d*)?|[\+-]?(\d+\.)\d*)((\d\.|\d)[eE][\+-]?\d*)?$");
+      public static Regex doubleValidate = 
+              new Regex(@"^([\+-]?\d+(\.\d*)?|[\+-]?\.\d+)([eE][\+-]?\d+)?$");
 
       public static string PromptLine(string prompt)
       {
@@ -134,11 +140,11 @@ namespace uifnt
          return number;
       }
 
-      public static bool Agree(string prompt)
+		public static bool Agree(string prompt) // crude version
       {
          Console.Write(prompt);
          // TODO: This can be ReadKey() as well and only terminates for Y/N/y/n (English).
-         return "y" == Console.ReadLine();
+			return Console.ReadLine().ToLower().StartsWith("y");
       }
                                                      
       public static bool IsDigits(string s) {

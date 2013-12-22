@@ -1,6 +1,6 @@
 using System;
 
-namespace uifnt
+namespace IntroCS
 {
    public class TryUIFNT
    {
