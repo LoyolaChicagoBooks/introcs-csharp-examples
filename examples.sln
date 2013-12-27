@@ -197,6 +197,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "instance_version", "instanc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uifnt", "uifnt\uifnt.csproj", "{EB733477-3302-4734-ACF5-964D0245489B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "addition2a", "addition2a\addition2a.csproj", "{BDF03A38-2931-45D4-9D7E-4A20D2E0364A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -494,6 +496,12 @@ Global
 		{BB2F40B1-1000-4B93-9CE5-214A1DAD70C4}.Debug|x86.Build.0 = Debug|x86
 		{BB2F40B1-1000-4B93-9CE5-214A1DAD70C4}.Release|x86.ActiveCfg = Release|x86
 		{BB2F40B1-1000-4B93-9CE5-214A1DAD70C4}.Release|x86.Build.0 = Release|x86
+		{BDF03A38-2931-45D4-9D7E-4A20D2E0364A}.Debug|x86.ActiveCfg = Debug|x86
+		{BDF03A38-2931-45D4-9D7E-4A20D2E0364A}.Debug|x86.Build.0 = Debug|x86
+		{BDF03A38-2931-45D4-9D7E-4A20D2E0364A}.Default|Any CPU.ActiveCfg = Debug|x86
+		{BDF03A38-2931-45D4-9D7E-4A20D2E0364A}.Default|Any CPU.Build.0 = Debug|x86
+		{BDF03A38-2931-45D4-9D7E-4A20D2E0364A}.Release|x86.ActiveCfg = Release|x86
+		{BDF03A38-2931-45D4-9D7E-4A20D2E0364A}.Release|x86.Build.0 = Release|x86
 		{BDFC284F-6A97-45CB-A857-DBAD8DAE12E9}.Debug|x86.ActiveCfg = Debug|x86
 		{BDFC284F-6A97-45CB-A857-DBAD8DAE12E9}.Debug|x86.Build.0 = Debug|x86
 		{BDFC284F-6A97-45CB-A857-DBAD8DAE12E9}.Default|Any CPU.ActiveCfg = Debug|x86
