@@ -21,7 +21,7 @@ namespace IntroCS
                                            prompt, lowLim, highLim);
                                                             // start chunk  
          int number = UIF.PromptInt(longPrompt);
-         while (number < lowLim || number > highLim) {
+			while (number < lowLim || number > highLim) { // infinte loop!
             Console.WriteLine("{0} is out of range!", number);
             // number = UIF.PromptInt(longPrompt); //OMITS repeated prompt!
          }
