@@ -34,7 +34,7 @@ namespace IntroCS
          return responses.ContainsKey(aString);
       }
    
-      /// Return the command associated with a command workd.
+      /// Return the command associated with a command word.
       ///  cmdWord The command word.
       /// Return the Response for the command.
       public Response getResponse(string cmdWord)

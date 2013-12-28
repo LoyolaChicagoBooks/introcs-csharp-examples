@@ -42,7 +42,6 @@ namespace IntroCS
       { return "f(x) = sin x - cos x"; }         
    }
 
-
    class BisectionMethod
    {
 
