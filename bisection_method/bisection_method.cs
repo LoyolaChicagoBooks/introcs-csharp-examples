@@ -12,7 +12,12 @@ namespace IntroCS
 
       public Polynomial(double[] coefficients)
       {
-         coef = coefficients;
+			int len = coefficients.Length, deg = len - 1;
+			while (deg > 0 && coefficients[deg] == 0)
+				deg--;
+			coef = new double[deg+1];
+			for (int i = 0; i <= deg; i++)
+				coef[deg - i] = coefficients[len - 1 - i];
       }
 
       public double f(double x) {
@@ -117,13 +122,14 @@ namespace IntroCS
 
       public static void Main (string[] args)
       {
-         Function p = new Polynomial(new double[] { 1, -3, -3, 1 });
-         // This should have solution x = -1.  -1 - 3 + 3 + 1 = 0  
-         ShowBisection(p, -10.0, 10.0, .001, 10000);
-         p = new Polynomial(new double[] { 1, 0, -2 });
+         Function p = new Polynomial(new double[] { 1, 0, -2 });
          // This should have solution x = +/- square root of 2  
-         ShowBisection(p, 0, 1, .0001, 100);
-         ShowBisection(p, 0, 2, .0001, 100);
+			ShowBisection(p, 0, 2, .0001, 100);
+			ShowBisection(p, 0, 1, .0001, 100);
+			p = new Polynomial(new double[] { 1, -3, -3, 1 });
+			// This should have solution x = -1.  -1 - 3 + 3 + 1 = 0  
+			ShowBisection(p, -10.0, 10.0, .001, 10000);
+
          ShowBisection(new TrigSum(), 0, 1, .00001, 100);  // pi / 4  
       }
 
