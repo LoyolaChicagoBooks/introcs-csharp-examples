@@ -140,7 +140,7 @@ namespace IntroCS
          Console.WriteLine("\nLet " + F);
          Console.WriteLine("Looking for a root in [{0}, {1}].", a, b);
          Console.WriteLine("First have tolerance {0} and max iterations {1}.",
-            tolerance, iterations);
+                           tolerance, iterations);
          double root = Bisection(F, a, b, tolerance, iterations);
          if (!double.IsNaN(root))  // Nan not equal to itself!
             Console.WriteLine ("An approximate root is " + root);
