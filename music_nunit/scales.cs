@@ -49,13 +49,13 @@ namespace IntroCS
 
 
       // chunk-main-begin
-      public static void Main (string[] args)
+      public static void Main (string[] args) 
       {
-         int[] scale = new int[8];
+         int[] scale = new int[8]; 
          int[] major = { 2, 2, 1, 2, 2, 2, 1 };
          int[] minor = { 2, 1, 2, 2, 1, 2, 2 };
 
-         string name = args[0];
+         string name = args[0];  // need command line tone name
          Console.WriteLine("{0} major scale", name);
          ComputeScale(name, major, scale);
          WriteScale(scale);

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BDF03A38-2931-45D4-9D7E-4A20D2E0364A}</ProjectGuid>
+    <ProjectGuid>{66300CAD-0647-4EB6-ABFB-F0A7ED4A265F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>addition2a</RootNamespace>
     <AssemblyName>addition2a</AssemblyName>

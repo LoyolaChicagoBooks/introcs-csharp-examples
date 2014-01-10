@@ -70,11 +70,11 @@ namespace IntroCS
       public static void Main()
       {
          string input = UI.PromptLine(
-            "Please enter some integers, separated by single spaces:");
+            "Please enter some integers, separated by single spaces: ");
          int[] data = Searching.IntsFromString(input);
          Sorting.IntArrayShellSortBetter(data);
          string prompt =
-           "Please enter a number you want to find (blank line to end):";
+            "Please enter a number you want to find (blank line to end): ";
          input = UI.PromptLine(prompt);
          while (input.Length != 0) {
             int searchItem = int.Parse(input);

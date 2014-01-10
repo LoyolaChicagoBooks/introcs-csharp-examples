@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1554787C-0539-479B-BBE4-59778C40E9B8}</ProjectGuid>
+    <ProjectGuid>{DF8D1032-D3FD-4515-8A47-AF9726999DBB}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>bisection_method1</RootNamespace>
     <AssemblyName>bisection_method1</AssemblyName>

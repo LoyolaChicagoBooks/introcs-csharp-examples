@@ -5,36 +5,36 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F83AE46B-3145-45C6-A565-2580AEA4353F}</ProjectGuid>
+    <ProjectGuid>{82615005-190F-4D61-8855-66847E132F98}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>csproject_stub</RootNamespace>
     <AssemblyName>csproject_stub</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>True</DebugSymbols>
+    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>False</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
-    <Externalconsole>True</Externalconsole>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <DebugType>none</DebugType>
-    <Optimize>True</Optimize>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
-    <Externalconsole>True</Externalconsole>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="command_mapper.cs" />
     <Compile Include="command.cs" />
     <Compile Include="game.cs" />
@@ -51,11 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ui\ui.csproj">
-      <Project>{6A581A4A-8492-46E7-8F21-9D8F17D104F4}</Project>
+      <Project>{DC88927E-04FA-4738-A07B-D5188AEAB924}</Project>
       <Name>ui</Name>
     </ProjectReference>
     <ProjectReference Include="..\fio\fio.csproj">
-      <Project>{3ED502C8-557A-4E6E-9C23-653DB4C3BF52}</Project>
+      <Project>{38702508-4BEE-4055-B478-1F9FA30C1630}</Project>
       <Name>fio</Name>
     </ProjectReference>
   </ItemGroup>
