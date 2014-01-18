@@ -199,6 +199,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "word_search_puzzle", "word_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "write_test", "write_test\write_test.csproj", "{9F83A969-4482-45A5-90D0-B38815F0EC1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cmdline_to_file", "cmdline_to_file\cmdline_to_file.csproj", "{14481210-A1BA-45BA-B9E3-0B2F78819690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -253,6 +255,10 @@ Global
 		{13BA6FAB-AF12-4F07-9501-E3D94E9576D8}.Debug|x86.Build.0 = Debug|x86
 		{13BA6FAB-AF12-4F07-9501-E3D94E9576D8}.Release|x86.ActiveCfg = Release|x86
 		{13BA6FAB-AF12-4F07-9501-E3D94E9576D8}.Release|x86.Build.0 = Release|x86
+		{14481210-A1BA-45BA-B9E3-0B2F78819690}.Debug|x86.ActiveCfg = Debug|x86
+		{14481210-A1BA-45BA-B9E3-0B2F78819690}.Debug|x86.Build.0 = Debug|x86
+		{14481210-A1BA-45BA-B9E3-0B2F78819690}.Release|x86.ActiveCfg = Release|x86
+		{14481210-A1BA-45BA-B9E3-0B2F78819690}.Release|x86.Build.0 = Release|x86
 		{1ACB43EC-7B82-4951-9C13-98FD83563E76}.Debug|x86.ActiveCfg = Debug|x86
 		{1ACB43EC-7B82-4951-9C13-98FD83563E76}.Debug|x86.Build.0 = Debug|x86
 		{1ACB43EC-7B82-4951-9C13-98FD83563E76}.Release|x86.ActiveCfg = Release|x86

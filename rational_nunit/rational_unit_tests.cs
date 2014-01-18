@@ -3,10 +3,8 @@ using NUnit.Framework;
 
 namespace IntroCS
 {
-   // Rational Unit Tests...Note: will be used for the unit testing lecture (GKT).
-
    [TestFixture()]
-	public class RationalTests
+   public class RationalUnitTests //example for Testing Chapter
    {
       // snip-ConstructorTest-begin
       [Test()]
