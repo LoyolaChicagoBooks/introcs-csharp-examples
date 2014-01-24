@@ -13,17 +13,17 @@ namespace IntroCS
       public static Rational Parse(string s)
       {
          s = s.Trim();
-         string[] parts = {s, "1"};
-         if (s.Contains("/")) {
+         string[] parts = {s, "1"}; // for an int string, this is correct
+         if (s.Contains("/")) {     // otherwise correct num, denom parts
             parts = s.Split('/');
          } else if (s.Contains(".")) {
-            parts = s.Split('.');
-            string zeros = "";
-            foreach( char dig in parts[1]) {
+            parts = s.Split('.'); // parts not right yet
+            string zeros = "";                // will be as many 0's 
+            foreach( char dig in parts[1]) {  //    as digits after '.'
                 zeros += "0";
             }
-            parts[0] += parts[1];
-            parts[1] = "1"+zeros;
+            parts[0] += parts[1];  // "shift" decimal point
+            parts[1] = "1"+zeros;  // deniminator compensates
          }
          return new Rational(int.Parse(parts[0].Trim()),
                              int.Parse(parts[1].Trim()));
