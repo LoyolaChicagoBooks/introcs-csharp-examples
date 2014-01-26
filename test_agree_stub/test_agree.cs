@@ -1,7 +1,7 @@
 using System;
 namespace IntroCS
 {
-   class InputInRange  //version with range added to prompt
+   class TestAgree  
    {
       
       public static void Main() //testing routine
@@ -10,8 +10,8 @@ namespace IntroCS
       }
       
       /// Prompt the user with a question; Return true of false.
-      /// Allow certain starting characters for true and
-      /// others for false, and repeat until the response
+      /// Allow certain starting characters for true (t, y) and
+      /// others for false (f, n), and repeat until the response
       /// is in one of these groups.
       static Boolean Agree(string question)
       {
