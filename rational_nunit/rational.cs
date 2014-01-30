@@ -23,7 +23,7 @@ namespace IntroCS
                 zeros += "0";
             }
             parts[0] += parts[1];  // "shift" decimal point
-            parts[1] = "1"+zeros;  // deniminator compensates
+            parts[1] = "1"+zeros;  // denominator compensates
          }
          return new Rational(int.Parse(parts[0].Trim()),
                              int.Parse(parts[1].Trim()));

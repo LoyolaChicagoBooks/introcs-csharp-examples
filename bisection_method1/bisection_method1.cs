@@ -17,7 +17,7 @@ namespace IntroCS
       public static double Bisection(double a, double b, 
                                      double tolerance, int iterations) {
          // check the preconditions for the method to work
-         // a must be greater than b so we can do the interval search 
+         // a must be less than b so we can do the interval search 
          if (a >= b)
             return double.NaN;
          Console.WriteLine ("a >= b ok");
