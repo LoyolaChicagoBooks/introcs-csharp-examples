@@ -201,6 +201,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "write_test", "write_test\wr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cmdline_to_file", "cmdline_to_file\cmdline_to_file.csproj", "{14481210-A1BA-45BA-B9E3-0B2F78819690}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5F51CC2-2CB0-43E2-A378-E5581B4D164F}"
+	ProjectSection(SolutionItems) = preProject
+		examples.sln = examples.sln
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rational_ops_stub", "rational_ops_stub\rational_ops_stub.csproj", "{BEE2954D-48D5-4B66-88CE-3AF2DE7763DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -519,6 +526,10 @@ Global
 		{BA48056C-1D41-43D7-A016-367A76A003AB}.Debug|x86.Build.0 = Debug|x86
 		{BA48056C-1D41-43D7-A016-367A76A003AB}.Release|x86.ActiveCfg = Release|x86
 		{BA48056C-1D41-43D7-A016-367A76A003AB}.Release|x86.Build.0 = Release|x86
+		{BEE2954D-48D5-4B66-88CE-3AF2DE7763DE}.Debug|x86.ActiveCfg = Debug|x86
+		{BEE2954D-48D5-4B66-88CE-3AF2DE7763DE}.Debug|x86.Build.0 = Debug|x86
+		{BEE2954D-48D5-4B66-88CE-3AF2DE7763DE}.Release|x86.ActiveCfg = Release|x86
+		{BEE2954D-48D5-4B66-88CE-3AF2DE7763DE}.Release|x86.Build.0 = Release|x86
 		{C320F08F-4D2F-4FE8-9ACC-26FDA93F16A7}.Debug|x86.ActiveCfg = Debug|x86
 		{C320F08F-4D2F-4FE8-9ACC-26FDA93F16A7}.Debug|x86.Build.0 = Debug|x86
 		{C320F08F-4D2F-4FE8-9ACC-26FDA93F16A7}.Release|x86.ActiveCfg = Release|x86
@@ -607,6 +618,8 @@ Global
 		{FDCBEB8E-9110-47AA-9C6F-C394128DA89F}.Debug|x86.Build.0 = Debug|x86
 		{FDCBEB8E-9110-47AA-9C6F-C394128DA89F}.Release|x86.ActiveCfg = Release|x86
 		{FDCBEB8E-9110-47AA-9C6F-C394128DA89F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = addition1\addition1.csproj
