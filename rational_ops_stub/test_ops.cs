@@ -24,10 +24,10 @@ namespace IntroCS
          Console.WriteLine ("{0} * {1} != {2} ? {3}", 
                               a,    b,     p, a*b != p);
          var t = new Rational (1, 10);
-         Console.WriteLine ("(double)({0}) + (double)({1}) - (double)({2}) = {3}", 
-                          t, 2*t, 3*t, (double)t + (double)(2*t) - (double)(3*t));
-         Console.WriteLine ("(decimal)({0}) + (decimal)({1}) - (decimal)({2}) = {3}", 
-                          t, 2*t, 3*t, (decimal)t + (decimal)(2*t) - (decimal)(3*t));
+         Console.WriteLine ("(double)({0}) + (double)({1}) == (double)({2}) ? {3}", 
+                          t, 2*t, 3*t, (double)t + (double)(2*t) == (double)(3*t));
+         Console.WriteLine ("(decimal)({0}) + (decimal)({1}) == (decimal)({2}) ? {3}", 
+                          t, 2*t, 3*t, (decimal)t + (decimal)(2*t) == (decimal)(3*t));
 
          // After coding Rational binary operators /, +, -, <, >, <=, >=.
          // ADD TESTS FOR THEM
