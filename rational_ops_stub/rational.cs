@@ -133,17 +133,17 @@ namespace IntroCS
       {
          return new Rational(n, 1);
       }
-
+                                            // to double chunk
       /// Code to cast to a double implicitly when needed. 
       public static implicit operator double(Rational f)
       {
-         return ((double)(f.num))/f.denom;
+         return (double)f.num/f.denom;
       }
                                               // explicit cast chunk
       /// Code to cast to a decimal with an explicit cast. 
       public static explicit operator decimal(Rational f)
       {
-         return ((decimal)(f.num))/f.denom;
+         return (decimal)f.num/f.denom;
       }
                                                  // end chunk
       /// / binary division operator
