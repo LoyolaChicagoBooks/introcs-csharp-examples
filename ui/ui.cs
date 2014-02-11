@@ -34,7 +34,19 @@ namespace IntroCS
          }
          return double.Parse(nStr);
       }
-                                                 
+
+      /// Prompt the user to enter a decimal value until the response 
+      /// is legal.  Return the result as a decimal. 
+      public static decimal PromptDecimal(string prompt)
+      {
+         string nStr = PromptLine(prompt).Trim();
+         while (!IsDecimalString(nStr)) {
+            Console.WriteLine("Bad decimal format!  Try again.");
+            nStr = PromptLine(prompt).Trim();
+         }
+         return decimal.Parse(nStr);
+      }
+
       /// Prompt the user until a keyboard entry is an int
       /// in the range [lowLim, highLim].  Then return the int value 
       /// in range.  Append the range to the prompt.
