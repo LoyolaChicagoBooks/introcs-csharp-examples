@@ -29,6 +29,7 @@ namespace IntroCS
       ///      2: 7
       ///      3: -1
       ///  and the function would return an array containing {5, 7, -1}. 
+      ///  Note the format of the prompts for individual elements.
       static int[] ReadInts(string prompt, int n)
       {
          return new int[0]; // so stub compiles
