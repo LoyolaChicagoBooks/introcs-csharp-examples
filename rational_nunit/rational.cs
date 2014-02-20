@@ -12,19 +12,18 @@ namespace IntroCS
       ///  and return the corresponding Rational. 
       public static Rational Parse(string s)
       {
-         s = s.Trim();
+         s = s.Trim();      // will adjust numerator and denominator parts
          string[] parts = {s, "1"}; // for an int string, this is correct
          if (s.Contains("/")) {     // otherwise correct num, denom parts
             parts = s.Split('/');
          } else if (s.Contains(".")) {
-            parts = s.Split('.'); // parts not right yet
-            string zeros = "";                // will be as many 0's 
-            foreach( char dig in parts[1]) {  //    as digits after '.'
-                zeros += "0";
+            string[] intFrac = s.Split('.'); // integer, fractional digits
+            parts[0] = intFrac[0]+intFrac[1];  // "shift" decimal point
+            parts[1] = "1";                 // denom will have as many 0's 
+            foreach( char dig in intFrac[1]) {  //    as digits after '.'
+               parts[1] += "0";                 //    to compensate 
             }
-            parts[0] += parts[1];  // "shift" decimal point
-            parts[1] = "1"+zeros;  // denominator compensates
-         }
+         } 
          return new Rational(int.Parse(parts[0].Trim()),
                              int.Parse(parts[1].Trim()));
       }
@@ -34,9 +33,9 @@ namespace IntroCS
       {
          num = numerator;
          denom = denominator;
-         normalize();
+         Normalize();
       }
-                                    // numerator chunk
+                                    // getter chunk
       public int GetNumerator()
       {
          return num;
@@ -61,25 +60,26 @@ namespace IntroCS
       {
          return ((double)num)/denom;
       }
-                                   // ToDecimal chunk
+                                   
       /// Return a decimal approximation to the fraction. 
       public decimal ToDecimal()
       {
          return ((decimal)num)/denom;
       }
-                                   // Negate chunk
-      /// Return a new Rational which is this Rational negated.
-      public Rational Negate()
-      {
-         return new Rational(-num, denom);
-      }
-                                   // Reciprocal chunk
+                                         // Reciprocal chunk
       /// Return a new Rational which is the reciprocal of this Rational.
       public Rational Reciprocal()
       {
          return new Rational(denom, num);
       }
-                                   // Multiply chunk
+
+      /// Return a new Rational which is this Rational negated.
+      public Rational Negate()
+      {
+         return new Rational(-num, denom);
+      }
+
+                                        // Multiply chunk
       /// Return a new Rational which is the product of this Rational and f. 
       public Rational Multiply(Rational f)
       {                           // end Multiply heading chunk
@@ -114,7 +114,7 @@ namespace IntroCS
       }
    
       /// Return the positive greatest common divisor of parameters a and b.
-      private static int gcd(int a, int b)
+      private static int GCD(int a, int b)
       {  // assume a or b is not 0
          if (a == 0)
             return Math.Abs(b);
@@ -127,13 +127,13 @@ namespace IntroCS
       }
                                   // start normalize chunk
       /// Force the invarient: in lowest terms with a positive denominator.
-      private void normalize()
-      {                           // end heading chunk
+      private void Normalize()
+      {                           
          if (denom == 0) { // We *should* force an Exception, but we won't.
             Console.WriteLine("Zero denominator changed to 1!");
             denom = 1;
          }
-         int n = gcd(num, denom);
+         int n = GCD(num, denom);
          num /= n;         // lowest
          denom /= n;       //    terms
          if (denom < 0) {  // make denom positive
@@ -141,5 +141,5 @@ namespace IntroCS
             num = -num;    //   same mathematical value
          }
       }
-   }
+   }                                 //end chunk
 }
