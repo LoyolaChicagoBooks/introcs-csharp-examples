@@ -78,6 +78,8 @@ namespace IntroCS
     
       public static void Main (string[] args)
       {
+         int seed = new Random().Next();  // Use seed with each experiment.
+
          // Write the code to parse args for the parameters
          // rep n1 n2 n3 ...
        
