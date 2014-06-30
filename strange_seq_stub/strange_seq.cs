@@ -33,7 +33,7 @@ namespace IntroCS
       /// printing the whole sequence, just count the
       /// number of entries.  For example,
       ///   CountStrangeSequence(1) returns 1; 
-      ///   CountStrangeSequence(6) returns 6.
+      ///   CountStrangeSequence(5) returns 6.
       static int CountStrangeSequence(int n)
       {
          return 0;  // so stub compiles

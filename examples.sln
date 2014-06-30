@@ -212,6 +212,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contact1", "contact1\contac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contact2", "contact2\contact2.csproj", "{34A298A7-7F18-4CE4-B931-680E4363C760}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "update_vars", "update_vars\update_vars.csproj", "{EE6A0AB2-B87C-44C7-A394-C557D2AF570F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "update_vars2", "update_vars2\update_vars2.csproj", "{DC593E8E-E25C-473A-B88B-A20C4EF1767B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parenthesized", "parenthesized\parenthesized.csproj", "{5954DF3F-0471-4211-B3F6-33D40B975AAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loop_steps", "loop_steps\loop_steps.csproj", "{7122E5A8-1AED-44BC-9CC5-E93F1FAB395D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -394,6 +402,10 @@ Global
 		{57AC749E-23C3-4EDA-9725-66072A958462}.Debug|x86.Build.0 = Debug|x86
 		{57AC749E-23C3-4EDA-9725-66072A958462}.Release|x86.ActiveCfg = Release|x86
 		{57AC749E-23C3-4EDA-9725-66072A958462}.Release|x86.Build.0 = Release|x86
+		{5954DF3F-0471-4211-B3F6-33D40B975AAA}.Debug|x86.ActiveCfg = Debug|x86
+		{5954DF3F-0471-4211-B3F6-33D40B975AAA}.Debug|x86.Build.0 = Debug|x86
+		{5954DF3F-0471-4211-B3F6-33D40B975AAA}.Release|x86.ActiveCfg = Release|x86
+		{5954DF3F-0471-4211-B3F6-33D40B975AAA}.Release|x86.Build.0 = Release|x86
 		{5CE283A2-5414-4158-963E-F3903F329E36}.Debug|x86.ActiveCfg = Debug|x86
 		{5CE283A2-5414-4158-963E-F3903F329E36}.Debug|x86.Build.0 = Debug|x86
 		{5CE283A2-5414-4158-963E-F3903F329E36}.Release|x86.ActiveCfg = Release|x86
@@ -430,6 +442,10 @@ Global
 		{70DA7F08-A57E-4B5A-B9E6-4156AC87DD67}.Debug|x86.Build.0 = Debug|x86
 		{70DA7F08-A57E-4B5A-B9E6-4156AC87DD67}.Release|x86.ActiveCfg = Release|x86
 		{70DA7F08-A57E-4B5A-B9E6-4156AC87DD67}.Release|x86.Build.0 = Release|x86
+		{7122E5A8-1AED-44BC-9CC5-E93F1FAB395D}.Debug|x86.ActiveCfg = Debug|x86
+		{7122E5A8-1AED-44BC-9CC5-E93F1FAB395D}.Debug|x86.Build.0 = Debug|x86
+		{7122E5A8-1AED-44BC-9CC5-E93F1FAB395D}.Release|x86.ActiveCfg = Release|x86
+		{7122E5A8-1AED-44BC-9CC5-E93F1FAB395D}.Release|x86.Build.0 = Release|x86
 		{72C66D54-EA2C-467F-B78F-22C6F4B1DEEF}.Debug|x86.ActiveCfg = Debug|x86
 		{72C66D54-EA2C-467F-B78F-22C6F4B1DEEF}.Debug|x86.Build.0 = Debug|x86
 		{72C66D54-EA2C-467F-B78F-22C6F4B1DEEF}.Release|x86.ActiveCfg = Release|x86
@@ -578,6 +594,10 @@ Global
 		{D7EF550F-87B6-48D7-BA4A-D89462ABC23F}.Debug|x86.Build.0 = Debug|x86
 		{D7EF550F-87B6-48D7-BA4A-D89462ABC23F}.Release|x86.ActiveCfg = Release|x86
 		{D7EF550F-87B6-48D7-BA4A-D89462ABC23F}.Release|x86.Build.0 = Release|x86
+		{DC593E8E-E25C-473A-B88B-A20C4EF1767B}.Debug|x86.ActiveCfg = Debug|x86
+		{DC593E8E-E25C-473A-B88B-A20C4EF1767B}.Debug|x86.Build.0 = Debug|x86
+		{DC593E8E-E25C-473A-B88B-A20C4EF1767B}.Release|x86.ActiveCfg = Release|x86
+		{DC593E8E-E25C-473A-B88B-A20C4EF1767B}.Release|x86.Build.0 = Release|x86
 		{DC88927E-04FA-4738-A07B-D5188AEAB924}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{DC88927E-04FA-4738-A07B-D5188AEAB924}.Debug|x86.Build.0 = Debug|Any CPU
 		{DC88927E-04FA-4738-A07B-D5188AEAB924}.Release|x86.ActiveCfg = Release|Any CPU
@@ -610,6 +630,10 @@ Global
 		{EC94580F-97F3-490A-ABBC-3F835F912A49}.Debug|x86.Build.0 = Debug|x86
 		{EC94580F-97F3-490A-ABBC-3F835F912A49}.Release|x86.ActiveCfg = Release|x86
 		{EC94580F-97F3-490A-ABBC-3F835F912A49}.Release|x86.Build.0 = Release|x86
+		{EE6A0AB2-B87C-44C7-A394-C557D2AF570F}.Debug|x86.ActiveCfg = Debug|x86
+		{EE6A0AB2-B87C-44C7-A394-C557D2AF570F}.Debug|x86.Build.0 = Debug|x86
+		{EE6A0AB2-B87C-44C7-A394-C557D2AF570F}.Release|x86.ActiveCfg = Release|x86
+		{EE6A0AB2-B87C-44C7-A394-C557D2AF570F}.Release|x86.Build.0 = Release|x86
 		{EF1BD0A6-854C-47EC-9B10-F471C808E667}.Debug|x86.ActiveCfg = Debug|x86
 		{EF1BD0A6-854C-47EC-9B10-F471C808E667}.Debug|x86.Build.0 = Debug|x86
 		{EF1BD0A6-854C-47EC-9B10-F471C808E667}.Release|x86.ActiveCfg = Release|x86
