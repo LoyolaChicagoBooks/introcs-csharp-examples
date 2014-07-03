@@ -11,13 +11,14 @@ class DoTheMath {   // Lab stub
          Do the same for the denominator.
 
          Calculate quotient and remainder (as integers)
-         Use Console.WriteLine() to make the results pretty 
-         above.
+         Use Console.WriteLine() to display the labels
+         as illustrated in the sample output in the lab.
 
-         Do the same but using floating point division and not
-         doing the remainder calculation.   
+         Do the same but using floating point division 
+         and not doing the remainder calculation.   
 
          Create the sentence with the mixed fraction.
+         Be careful of the places there are *not* spaces.
       */
    }
 }
