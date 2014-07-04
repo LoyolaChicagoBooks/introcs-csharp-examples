@@ -7,7 +7,7 @@ namespace IntroCS
    
       static void Main() //testing routine
       {
-         int n = UI.PromptIntInRange("Enter a number of repetitions: ", 0, 20);
+         int n = UI.PromptIntInRange("Enter a number of repetitions: ", 0, 30);
          string s = UI.PromptLine("Enter a string: ");
          Console.Write("Direct print {0} reps of {1}: ", n, s);
          PrintReps(s, n);
@@ -56,18 +56,18 @@ namespace IntroCS
          Console.WriteLine("Not implemented");
       }
                                                      //PrintTableBorders chunk
-      // For example PrintTableBorders(3, 2, 4, 1) prints
-      //    +----+----+----+
-      //    |    |    |    |
-      //    +----+----+----+
-      //    |    |    |    |
-      //    +----+----+----+
       /// Print the borders of the cells of a table. 
       /// The borders divide the table into rows and columns.
       /// The blank space within a cell is width characters wide
-      /// for height lines.
+      /// and continues down for height lines.
       /// The horizontal borders are dashes '-' and the vertical borders
       /// are vertical bars, '|', except that all intersections are '+'.
+      /// For example PrintTableBorders(3, 2, 4, 1) prints
+      ///    +----+----+----+
+      ///    |    |    |    |
+      ///    +----+----+----+
+      ///    |    |    |    |
+      ///    +----+----+----+
       static void PrintTableBorders(int columns, int rows, 
                                     int width, int height)
       {                                                     // body
