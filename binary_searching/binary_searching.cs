@@ -8,9 +8,8 @@ namespace IntroCS
       /// or return -1 if item is not in the array.
       public static int IntArrayBinarySearch(int[] data, int item) 
       {
-         int N = data.Length;
-         int min = 0, max = N-1;
-         do {
+         int min = 0, max = data.Length-1;
+         while(min <= max) {
             int mid = (min+max) / 2;
             if (data[mid] == item)
                return mid;
@@ -18,7 +17,7 @@ namespace IntroCS
                min = mid + 1;
             else
                max = mid - 1;
-         } while(min <= max);
+         } 
          return -1;
       }
                                           // chunk-binarysearch-end
@@ -48,12 +47,11 @@ namespace IntroCS
       /// Binary search with step by step display
       public static int IntArrayBinarySearchPrinted(int[] data, int item) 
       {
-         int N=data.Length;
-         int min = 0, max= N-1;
+         int N=data.Length, min = 0, max= N-1;
          Console.WriteLine("array indices:");
          IntArrayPrint(IndexSeq(N), min, max);
          Console.WriteLine("array data:");
-         do {
+         while (min <= max) {
             IntArrayPrint(data, min, max);
             int mid = (min+max) / 2;
             Console.WriteLine("min={0} max={1} mid={2}", min, max, mid);
@@ -63,7 +61,7 @@ namespace IntroCS
                min = mid + 1;
             else
                max = mid - 1;
-         } while(min <= max);
+         } 
          return -1;
       }
                                           // chunk-driver-begin
@@ -74,7 +72,7 @@ namespace IntroCS
          int[] data = Searching.IntsFromString(input);
          Sorting.IntArrayShellSortBetter(data);
          string prompt =
-            "Please enter a number you want to find (blank line to end): ";
+            "Please enter a number you want to find (empty line to end): ";
          input = UI.PromptLine(prompt);
          while (input.Length != 0) {
             int searchItem = int.Parse(input);

@@ -39,7 +39,7 @@ namespace IntroCS
 	     foreach (int n in rowSum) {
 	        width = Math.Max(width, (""+n).Length);
 	     }
-	     string format = string.Format("{{0, {0}}} ", width);
+        string format = "{0," + width + "} ";
 	       
 	     for (int r = 0; r < t.GetLength(0); r++) {
 	        for (int c = 0; c < t.GetLength(1); c++) {
