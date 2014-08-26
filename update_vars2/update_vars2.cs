@@ -9,6 +9,6 @@ class UpdateVars2
       a = a * b;       
       b = a - b;  
       a = a + b;
-      Console.WriteLine (a + ':' + b);
+      Console.WriteLine (a + ":" + b);
    }
 }

@@ -8,6 +8,6 @@ class UpdateVars
       int y = x + 2;
       y = 2 * y;       
       x = y - x;      
-      Console.WriteLine (x + ' ' + y);
+      Console.WriteLine (x + " " + y);
    }
 }
