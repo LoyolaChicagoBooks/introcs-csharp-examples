@@ -130,7 +130,7 @@ namespace IntroCS
          //      data[i] >= pivot for i >= afterSmall. 
          if (lowI < beforeBig) // at least two elements
             IntArrayQuickSort (data, lowI, beforeBig);
-         if (afterSmall < highI)) // at least two elements
+         if (afterSmall < highI) // at least two elements
             IntArrayQuickSort (data, afterSmall, highI);
       }
 
