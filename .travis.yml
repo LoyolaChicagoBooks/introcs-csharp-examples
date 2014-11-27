@@ -6,4 +6,4 @@ before_install:
   - sudo apt-get install monodevelop
 script:
   - mdtool build
-  - nunit-console $(find . -name rational_nunit.dll)
+  - find . -name '*nunit.dll' -exec nunit-console {} \;
