@@ -16,7 +16,7 @@ before_install:
  - sh .ci/install-mono-${MONO_SCRIPT}.sh ${MONO_VER}
 
 script:
- - xbuild 
+ - xbuild /verbosity:quiet
  - .ci/RunTests.sh 
 
 branches:
