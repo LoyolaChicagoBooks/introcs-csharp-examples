@@ -11,7 +11,12 @@ runTest(){
 }
 
 
-#runTest KeyczarTest/bin/Debug/KeyczarTest.dll -exclude=Performance
-runTest rational_nunit/bin/Debug/rational_nunit.dll
+# Run any DLL that has nunit at the end of its name. This is our convention
+# for examples that have associated NUnit tests.
+
+for unit_test in $(find . -name '*_nunit.dll')
+do
+   runTest $unit_test
+done
 
 exit $?
