@@ -6,13 +6,13 @@ env:
  global:
   - EnableNuGetPackageRestore=true 
  matrix:
-  - MONO_VER="2.10.11"
-  - MONO_VER="3.10.0"
+  - MONO_VER="2.10.11" FORMAT="dmg"
+  - MONO_VER="3.10.0" FORMAT="pkg"
 
 before_install:
- - wget "http://download.mono-project.com/archive/${MONO_VER}/macos-10-x86/MonoFramework-MDK-${MONO_VER}.macos10.xamarin.x86.dmg"
- - hdid "MonoFramework-MDK-${MONO_VER}.macos10.xamarin.x86.dmg"
- - sudo installer -pkg "/Volumes/Mono Framework MDK ${MONO_VER}/MonoFramework-MDK-${MONO_VER}.macos10.xamarin.x86.pkg" -target /
+ - wget "http://download.mono-project.com/archive/${MONO_VER}/macos-10-x86/MonoFramework-MDK-${MONO_VER}.macos10.xamarin.x86.${FORMAT}"
+ - [ "$FORMAT" == "dmg" ] && hdid "MonoFramework-MDK-${MONO_VER}.macos10.xamarin.x86.dmg" && sudo installer -pkg "/Volumes/Mono Framework MDK ${MONO_VER}/MonoFramework-MDK-${MONO_VER}.macos10.xamarin.x86.pkg" -target /
+ - [ "$FORMAT" == "pkg" ] && sudo installer -pkg "MonoFramework-MDK-${MONO_VER}.macos10.xamarin.x86.pkg" -target /
 
 script:
  - xbuild 
