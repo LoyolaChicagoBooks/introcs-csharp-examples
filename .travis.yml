@@ -2,6 +2,7 @@ language: c
 before_install:
   - sudo apt-get update
   - sudo apt-get install mono-complete
+  - sudo apt-get install nunit libnunit-cil-dev
 script:
   - which nunit-console
   - mono --version
