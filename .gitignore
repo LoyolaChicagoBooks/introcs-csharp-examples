@@ -1,13 +1,12 @@
 Thumbs.db
 .DS_Store
 obj/
+bin/
 build/
+packages/
 *.pyc
-*.exe
-*.exe
 *.mdb
 *.pdb
-*.dll
 *.pidb
 *.userprefs
 *.csproj.*
