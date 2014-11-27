@@ -13,7 +13,7 @@ env:
 # So we need to have separate scripts to download and install it in the Travis worker
 
 before_install:
- - sh .ci/install-mono-${MONO_SCRIPT} ${MONO_VER}
+ - sh .ci/install-mono-${MONO_SCRIPT}.sh ${MONO_VER}
 
 script:
  - xbuild 
