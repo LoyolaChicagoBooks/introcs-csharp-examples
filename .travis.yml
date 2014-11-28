@@ -7,7 +7,7 @@ env:
   - EnableNuGetPackageRestore=true 
  matrix:
   - MONO_SCRIPT="3" MONO_VER="3.10.0"
-# - MONO_SCRIPT="2" MONO_VER="2.10.11"
+  - MONO_SCRIPT="2" MONO_VER="2.10.11"
 
 # Mono distributes OS X binaries as pkg (for v2) and dmg (for v3)
 # So we need to have separate scripts to download and install it in the Travis worker
