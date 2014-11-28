@@ -14,6 +14,7 @@ env:
 
 before_install:
  - sh .ci/install-mono-${MONO_SCRIPT}.sh ${MONO_VER}
+ - find /Library/Frameworks/Mono.framework -name Microsoft.Build.dll
 
 script:
  - xbuild /verbosity:quiet
