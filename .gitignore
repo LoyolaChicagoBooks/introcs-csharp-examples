@@ -1,9 +1,9 @@
 Thumbs.db
 .DS_Store
-obj/
-bin/
 build/
 packages/
+*.dll
+*.exe
 *.pyc
 *.mdb
 *.pdb
