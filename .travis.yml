@@ -1,4 +1,10 @@
-# Travis-CI Build (adapted fro keyczar-dotnet example)
+# Travis-CI Build
+# Many thanks to the keyczar-dotnet project for initial inspiration.
+# Our contribution:
+#  - Handles both Mono 2 and 3 installation, generically, in an OS X worker
+#  - Unbundles the NuGet.exe setup (no binary dependencies carried)
+#  - Verifies NuGet.exe dependencies are present
+#  - Discovers and runs our unit tests
 
 language: objective-c
 
