@@ -7,11 +7,9 @@ class BadScope
       int x = 3;
       F();
    }
-   
-   static void F()
-   {
-      //Console.WriteLine(x); //ERROR F doesn't know about the x defined in Main
+
+   static void F()  
+   {  // F doesn't know about the x defined in Main
+      //Console.WriteLine(x); //ERROR if uncommented
    }
-
 }
-

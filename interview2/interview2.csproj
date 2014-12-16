@@ -5,10 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{14481210-A1BA-45BA-B9E3-0B2F78819690}</ProjectGuid>
+    <ProjectGuid>{40443DE8-043C-4175-899B-73D21463E2CA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>cmdline_to_file</RootNamespace>
-    <AssemblyName>cmdline_to_file</AssemblyName>
+    <RootNamespace>interview2</RootNamespace>
+    <AssemblyName>interview2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,12 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="nunit.framework" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="cmdline_to_file.cs" />
-    <Compile Include="cmdline_to_file_tests.cs" />
+    <Compile Include="interview2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

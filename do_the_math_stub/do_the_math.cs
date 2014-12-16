@@ -3,7 +3,7 @@ using System;
 class DoTheMath {   // Lab stub
    static void Main() {
       /* Prompt the user for the numerator using
-         Console.WriteLine().
+         Console.Write().
 
          Convert this text into int numerator using
          int.Parse().
