@@ -45,11 +45,11 @@ namespace IntroCS
        */
 
       public static Regex decimalValidate = 
-              new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$");
+         new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$");
       public static Regex doubleAccept = 
-              new Regex(@"^([\+-]?\d*(\.\d*)?|[\+-]?(\d+\.)\d*)((\d\.|\d)[eE][\+-]?\d*)?$");
+         new Regex(@"^([\+-]?\d*(\.\d*)?|[\+-]?(\d+\.)\d*)((\d\.|\d)[eE][\+-]?\d*)?$");
       public static Regex doubleValidate = 
-              new Regex(@"^([\+-]?\d+(\.\d*)?|[\+-]?\.\d+)([eE][\+-]?\d+)?$");
+         new Regex(@"^([\+-]?\d+(\.\d*)?|[\+-]?\.\d+)([eE][\+-]?\d+)?$");
 
       public static string PromptLine(string prompt)
       {
@@ -90,18 +90,36 @@ namespace IntroCS
          return inputChars.ToString();
       }
 
-
-      public static int PromptUnsignedInt(string prompt)
+      /// compare integer strings: 
+      ///   any lengths, but both positive or both negative
+      /// true if magnitude of s <= magnitude of lim
+      public static bool IntStrMagLessEq(string s, string lim)
       {
-         Console.Write(prompt);
-         return int.Parse(AcceptInput(digitsAccept, digitsValidate));
+         return s.Length < lim.Length || //automatically lower magnitude
+            s.Length == lim.Length && s.CompareTo(lim) <= 0;
+      }     // for same length, lexicographical comparison works
+
+      public static int PromptUnsignedInt(string prompt) 
+      {
+         while (true) {
+            Console.Write (prompt);
+            string s = AcceptInput (digitsAccept, digitsValidate);
+            if (IntStrMagLessEq(s, "" + int.MaxValue))
+               return int.Parse (s);
+            Console.WriteLine ("Integer too large!");
+         }
       }
 
-
-      public static int PromptInt(string prompt)
+      public static int PromptInt(string prompt) 
       {
-         Console.Write(prompt);
-         return int.Parse(AcceptInput(intAccept, intValidate));
+         while (true) {
+            Console.Write (prompt);
+            string s = AcceptInput (intAccept, intValidate);
+            if (s.StartsWith("-") && IntStrMagLessEq(s, ""+int.MinValue) ||
+               !s.StartsWith("-") && IntStrMagLessEq(s, ""+int.MaxValue) )
+               return int.Parse (s);
+            Console.WriteLine ("Integer out of range!");
+         }
       }
 
       public static decimal PromptDecimal(string prompt) {
@@ -115,10 +133,10 @@ namespace IntroCS
       }
 
       public static int PromptIntInRange(string prompt, 
-                                         int lowLim, int highLim)
+         int lowLim, int highLim)
       {
          string longPrompt = string.Format("{0} ({1} through {2}) ",
-                                           prompt, lowLim, highLim);
+            prompt, lowLim, highLim);
          int number = PromptInt(longPrompt);
          while (number < lowLim || number > highLim) {
             Console.WriteLine("{0} is out of range!", number);
@@ -128,10 +146,10 @@ namespace IntroCS
       }
 
       public static double PromptDoubleInRange(string prompt, 
-                                               double lowLim, double highLim)
+         double lowLim, double highLim)
       {
          string longPrompt = string.Format("{0} ({1} through {2}) ",
-                                           prompt, lowLim, highLim);
+            prompt, lowLim, highLim);
          double number = PromptDouble(longPrompt);
          while (number < lowLim || number > highLim) {
             Console.WriteLine("{0} is out of range!", number);
@@ -140,21 +158,21 @@ namespace IntroCS
          return number;
       }
 
-		public static bool Agree(string prompt) // crude version
+      public static bool Agree(string prompt) // crude version
       {
          Console.Write(prompt);
          // TODO: This can be ReadKey() as well and only terminates for Y/N/y/n (English).
-			return Console.ReadLine().ToLower().StartsWith("y");
+         return Console.ReadLine().ToLower().StartsWith("y");
       }
-                                                     
+
       public static bool IsDigits(string s) {
          return digitsValidate.IsMatch(s);
       }
-                                                     
+
       public static bool IsIntString(string s) {
          return intAccept.IsMatch(s);
       }
-                                                     
+
       public static bool IsDecimalString(string s) {
          return decimalAccept.IsMatch(s);
       }

@@ -1,13 +1,13 @@
 using System;
 namespace IntroCS
 {
-   class Wages  //with alternate version of calcWeeklyWages
+   class Wages  //with alternate version of CalcWeeklyWages
    {
       /// Return the total weekly wages for a worker working 
       /// totalHours with a given regular hourlyWage.  
       /// Include overtime for hours over 40.
       static double CalcWeeklyWages(double totalHours, double hourlyWage)
-      {                       // start chunk
+      {                       
          double regularHours, overtime;
          if (totalHours <= 40) {
             regularHours = totalHours;
@@ -18,8 +18,8 @@ namespace IntroCS
             overtime = totalHours - 40;
          }
          return hourlyWage*regularHours + (1.5*hourlyWage)*overtime;
-      }                       // end chunk
-      
+      }                      
+      //end CalcWeeklyWages chunk
       static void Main()  // rest same as in Wages1.cs
       {
          double hours = UIF.PromptDouble("Enter hours worked: ");

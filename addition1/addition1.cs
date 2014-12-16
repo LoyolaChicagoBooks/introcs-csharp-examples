@@ -1,22 +1,23 @@
 using System;
 
-class Addition1
+class Addition2
 {
-   static void SumProblem(int x, int y)
+   static string SumProblemString(int x, int y)
    {
       int sum = x + y;
       string sentence = "The sum of " + x + " and " + y + " is " + sum + ".";
-      Console.WriteLine(sentence);
+      return sentence;
    }
 
    static void Main()
    {
-      SumProblem(2, 3);
-      SumProblem(12345, 53579);
+      Console.WriteLine(SumProblemString(2, 3));
+      Console.WriteLine(SumProblemString(12345, 53579));
       Console.Write("Enter an integer: ");
       int a = int.Parse(Console.ReadLine());
       Console.Write("Enter another integer: ");
       int b = int.Parse(Console.ReadLine());
-      SumProblem(a, b);
+      Console.WriteLine(SumProblemString(a, b));
    }
 }
+   
