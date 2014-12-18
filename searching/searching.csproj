@@ -36,6 +36,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="searching.cs" />
+    <Compile Include="searching_demo.cs" />
+    <Compile Include="extract_from_string.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
