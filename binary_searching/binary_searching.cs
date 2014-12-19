@@ -64,26 +64,5 @@ namespace IntroCS
          } 
          return -1;
       }
-                                          // chunk-driver-begin
-      public static void Main()
-      {
-         string input = UI.PromptLine(
-            "Please enter some integers, separated by single spaces: ");
-         int[] data = Searching.IntsFromString(input);
-         Sorting.IntArrayShellSortBetter(data);
-         string prompt =
-            "Please enter a number you want to find (empty line to end): ";
-         input = UI.PromptLine(prompt);
-         while (input.Length != 0) {
-            int searchItem = int.Parse(input);
-            int foundPos = IntArrayBinarySearchPrinted(data, searchItem);
-            if (foundPos < 0)
-               Console.WriteLine("Item {0} not found", searchItem);
-            else
-               Console.WriteLine("Item {0} found at position {1}", 
-                                 searchItem, foundPos);
-            input = UI.PromptLine(prompt);
-         }
-      }
-   }                                   // end drive chunk
+   }                                   
 }

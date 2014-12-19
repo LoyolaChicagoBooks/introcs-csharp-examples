@@ -5,10 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{10DEFA6D-3E0F-4F8C-8A78-C1357D6D7DA7}</ProjectGuid>
+    <ProjectGuid>{9AA8CCE8-1090-4BDB-B5FB-8629AA0A9B64}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>binary_searching</RootNamespace>
-    <AssemblyName>binary_searching</AssemblyName>
+    <RootNamespace>remove_zeros</RootNamespace>
+    <AssemblyName>remove_zeros</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,22 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="binary_searching.cs" />
-    <Compile Include="binary_searching_demo.cs" />
+    <Compile Include="remove_zeros.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\ui\ui.csproj">
-      <Project>{DC88927E-04FA-4738-A07B-D5188AEAB924}</Project>
-      <Name>ui</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\searching\searching.csproj">
-      <Project>{005E533E-BEB3-4A4B-A56D-B06E203F1FB9}</Project>
-      <Name>searching</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\sorting\sorting.csproj">
-      <Project>{C7A5534C-FE4E-4D28-9C6E-3E3C72482BFA}</Project>
-      <Name>sorting</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

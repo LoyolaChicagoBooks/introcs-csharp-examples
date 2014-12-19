@@ -232,6 +232,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mad_lib", "mad_lib\mad_lib.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "update_vars3", "update_vars3\update_vars3.csproj", "{AA30D7F8-92AF-4278-BB92-B2D72A45DFA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "string_array", "string_array\string_array.csproj", "{DCFAC1BF-6CB1-4244-922C-9054ECB8A527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "remove_zeros", "remove_zeros\remove_zeros.csproj", "{9AA8CCE8-1090-4BDB-B5FB-8629AA0A9B64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -538,6 +542,10 @@ Global
 		{98D45AAB-6C57-47F5-B9FA-B925AA816045}.Debug|x86.Build.0 = Debug|x86
 		{98D45AAB-6C57-47F5-B9FA-B925AA816045}.Release|x86.ActiveCfg = Release|x86
 		{98D45AAB-6C57-47F5-B9FA-B925AA816045}.Release|x86.Build.0 = Release|x86
+		{9AA8CCE8-1090-4BDB-B5FB-8629AA0A9B64}.Debug|x86.ActiveCfg = Debug|x86
+		{9AA8CCE8-1090-4BDB-B5FB-8629AA0A9B64}.Debug|x86.Build.0 = Debug|x86
+		{9AA8CCE8-1090-4BDB-B5FB-8629AA0A9B64}.Release|x86.ActiveCfg = Release|x86
+		{9AA8CCE8-1090-4BDB-B5FB-8629AA0A9B64}.Release|x86.Build.0 = Release|x86
 		{9B2DF01D-0D29-4647-BBFC-F3CC8B433ABB}.Debug|x86.ActiveCfg = Debug|x86
 		{9B2DF01D-0D29-4647-BBFC-F3CC8B433ABB}.Debug|x86.Build.0 = Debug|x86
 		{9B2DF01D-0D29-4647-BBFC-F3CC8B433ABB}.Release|x86.ActiveCfg = Release|x86
@@ -638,6 +646,10 @@ Global
 		{DC88927E-04FA-4738-A07B-D5188AEAB924}.Debug|x86.Build.0 = Debug|Any CPU
 		{DC88927E-04FA-4738-A07B-D5188AEAB924}.Release|x86.ActiveCfg = Release|Any CPU
 		{DC88927E-04FA-4738-A07B-D5188AEAB924}.Release|x86.Build.0 = Release|Any CPU
+		{DCFAC1BF-6CB1-4244-922C-9054ECB8A527}.Debug|x86.ActiveCfg = Debug|x86
+		{DCFAC1BF-6CB1-4244-922C-9054ECB8A527}.Debug|x86.Build.0 = Debug|x86
+		{DCFAC1BF-6CB1-4244-922C-9054ECB8A527}.Release|x86.ActiveCfg = Release|x86
+		{DCFAC1BF-6CB1-4244-922C-9054ECB8A527}.Release|x86.Build.0 = Release|x86
 		{DEC8BF5B-F2CC-4D6F-9101-09D64F7085EA}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{DEC8BF5B-F2CC-4D6F-9101-09D64F7085EA}.Debug|x86.Build.0 = Debug|Any CPU
 		{DEC8BF5B-F2CC-4D6F-9101-09D64F7085EA}.Release|x86.ActiveCfg = Release|Any CPU
