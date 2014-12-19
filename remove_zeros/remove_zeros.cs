@@ -16,9 +16,9 @@ namespace IntroCS
             }
          }
          int[] notzero = new int[countNonZero];
-         int i = 0;
-         foreach(int n in data) { // copy nonzero
-            if (n != 0) {
+         int i = 0;  // index where to put the next value
+         foreach(int n in data) { 
+            if (n != 0) { // copy non-zero elements
                notzero[i] = n;
                i++;
             }
