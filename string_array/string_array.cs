@@ -37,8 +37,8 @@ namespace IntroCS
          return upper;
       }
                              // chunk AllToUpper                              
-      /// Modifiy the array array data so
-      /// all strings are in upper case.
+      /// Modifiy the array data so
+      ///   all strings are in upper case.
       public static void AllToUpper(string[] data)
       {
          for (int i = 0; i < data.Length; i++) {
