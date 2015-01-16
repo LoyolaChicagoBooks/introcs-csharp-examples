@@ -240,6 +240,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reversed_print", "reversed_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reversed_string", "reversed_string\reversed_string.csproj", "{BEE75C8C-6DB8-430E-B307-146456A0EA2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clock", "clock\clock.csproj", "{4B001B89-4E40-4469-BB1B-2215F1422E07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -414,6 +416,10 @@ Global
 		{4A5EBC8C-CA6B-411E-A110-8A8C04A8C931}.Debug|x86.Build.0 = Debug|x86
 		{4A5EBC8C-CA6B-411E-A110-8A8C04A8C931}.Release|x86.ActiveCfg = Release|x86
 		{4A5EBC8C-CA6B-411E-A110-8A8C04A8C931}.Release|x86.Build.0 = Release|x86
+		{4B001B89-4E40-4469-BB1B-2215F1422E07}.Debug|x86.ActiveCfg = Debug|x86
+		{4B001B89-4E40-4469-BB1B-2215F1422E07}.Debug|x86.Build.0 = Debug|x86
+		{4B001B89-4E40-4469-BB1B-2215F1422E07}.Release|x86.ActiveCfg = Release|x86
+		{4B001B89-4E40-4469-BB1B-2215F1422E07}.Release|x86.Build.0 = Release|x86
 		{4FE8498E-55C3-42DB-8987-4F8BE0BDC724}.Debug|x86.ActiveCfg = Debug|x86
 		{4FE8498E-55C3-42DB-8987-4F8BE0BDC724}.Debug|x86.Build.0 = Debug|x86
 		{4FE8498E-55C3-42DB-8987-4F8BE0BDC724}.Release|x86.ActiveCfg = Release|x86
