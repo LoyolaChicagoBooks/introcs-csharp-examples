@@ -8,7 +8,7 @@ namespace IntroCS
          Averager a = new Averager();
          Console.WriteLine("New Averager: " + a);
          foreach (double x in new[] {5.1, -7.3, 11.0, 3.7}) {
-            Console.WriteLine ("Next dataum " + x);
+            Console.WriteLine ("Next datum " + x);
             a.AddDatum (x);
             Console.WriteLine("average {0} with {1} data values", 
                a.GetAverage(), a.GetDataCount());
