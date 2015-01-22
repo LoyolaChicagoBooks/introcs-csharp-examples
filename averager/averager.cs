@@ -4,7 +4,7 @@ namespace IntroCS
    /// a class that is more than a container
    class Averager
    {
-      private int nValues;
+      private int dataCount;
       private double sum;
 
       /// new Averager with no data
@@ -16,30 +16,31 @@ namespace IntroCS
       public void AddDatum(double value)
       {
          sum += value;
-         nValues++;
+         dataCount++;
       }
 
       public int GetDataCount() 
       {
-         return nValues;
+         return dataCount;
       }
 
       /// Gets the average of the data
       ///   or NaN if no data.
       public double GetAverage() 
       {
-         return sum/nValues;  // is NaN if nValues is 0
+         return sum/dataCount;  // is NaN if dataCount is 0
       }
 
       public void Clear()
       {
          sum = 0.0;
-         nValues = 0;
+         dataCount = 0;
       }
 
       public override string ToString ()
       {
-         return string.Format("items: {0}; average: {1}", GetDataCount(), GetAverage());
+         return string.Format("items: {0}; average: {1}", 
+            GetDataCount(), GetAverage());
       } 
    }
 }
