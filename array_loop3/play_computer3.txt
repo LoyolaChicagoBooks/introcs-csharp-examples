@@ -1,24 +1,25 @@
 ﻿For ArrayLoop3:
          
-Line i s         comments            01234567    0123
-7    - -         strArray contains {"abcdefgh", "wxyz"}
-8    2                    2<4: true
-9      abcdefgh           s ia first element of strArray 
-10                        s.Substring(8/2) = s.Substring(4) is efgh
-                              print efgh/  (no newline)
-9      wxyz               s ia last element of strArray 
-10                        s.Substring(4/2) = s.Substring(2) is yz
-                              print yz/  (no newline)
-12                        advance to next line
-8    3 -                  2+1=3; 3<4: true
-9      abcdefgh           s ia first element of strArray 
-10                        s.Substring(8/3) = s.Substring(2) is cdefgh
-                              print cdefgh/  (no newline)
-9      wxyz               s ia last element of strArray 
-10                        s.Substring(4/3) = s.Substring(1) is xyz
-                              print xyz/  (no newline)
-12                        advance to next line
-8    4 -                  3+1=4; 4<4: false - done
+Line i  s         comments            
+7    -  -         strArray contains {"abcdefgh", "wxyz"}
+                            indices:  01234567    0123
+8    2            2<4: true
+9       abcdefgh  s is first element of strArray 
+10                s.Substring(8/2) = s.Substring(4) is efgh
+                      print efgh/  (no newline)
+9       wxyz      s is next/last element of strArray 
+10                s.Substring(4/2) = s.Substring(2) is yz
+                      print yz/  (no newline)
+12                advance to next line
+8    3  -         2+1=3; 3<4: true
+9       abcdefgh  s is first element of strArray 
+10                s.Substring(8/3) = s.Substring(2) is cdefgh
+                      print cdefgh/  (no newline)
+9       wxyz      s is next/last element of strArray 
+10                s.Substring(4/3) = s.Substring(1) is xyz
+                      print xyz/  (no newline)
+12                advance to next line
+8    4  -         3+1=4; 4<4: false - done
 
 Final printed output is:
 
