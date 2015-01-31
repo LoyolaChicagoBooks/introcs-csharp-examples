@@ -30,9 +30,10 @@ class Sample : abc
 
 /*
 Same effect as version 5. Only a change in *declared* type:
-Note that kind of objects created are now different
-than their common declared interface type:  abc.
-We can still call any method declared in the interface.
+Note that the objects created of classes InterfaceDemo6
+and Sample are used to initialize variables
+refDemo and refSample of their common interface type abc.
+We can call any method declared in the interface.
 
 Code modified from Chetan Kudalkar's article
 http://www.codeproject.com/Articles/18743/Interfaces-in-C-For-Beginners
