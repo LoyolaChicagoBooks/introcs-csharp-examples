@@ -21,7 +21,7 @@ interface abc, though it still does not use its implementation.
 
 Next remove just the word public from the declaration in line 8
 changing
-    public void xyz()-
+    public void xyz()
 to
     void xyz()
     

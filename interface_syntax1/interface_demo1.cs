@@ -8,13 +8,13 @@
 
 interface abc
 {
-//   int x;  // run commented, then try uncommented
+//   int x;  /* run commented out, then try uncommented */
 }
 
 /* -------------------------------------------------------
-The above program consists of a class Demo and Main()  prints 
+The above program consists of a class InterfaceDemo1 and
+an interface abc.   Main()  prints 
 Hello Interfaces
-The above program also defines an interface abc. 
 Interface abc is empty at this point of time. 
 Let's add some elements to this interface:
 

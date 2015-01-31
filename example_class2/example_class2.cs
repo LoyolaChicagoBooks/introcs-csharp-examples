@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.Generic;  //added
 
 /// elaboration allowing sorting via IComparable interface:
 class Example : IComparable<Example> //new: interface mention
@@ -62,7 +62,7 @@ class ExampleSortingDemo
          new Example(2, 9.9), new Example(5, -.3), 
          new Example(22, 0), new Example(5, 1.1)});
       foreach (Example e in pairs) {
-         Console.WriteLine (e);
+         Console.WriteLine(e);
       }
       Console.WriteLine("Sorted:");
       pairs.Sort();
