@@ -11,7 +11,7 @@
 
    public void xyz()
    {
-      System.Console.WriteLine("In Demo :: xyz");
+      System.Console.WriteLine("In InterfaceDemo6 :: xyz");
    }  
 }
 

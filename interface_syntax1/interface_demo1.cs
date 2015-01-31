@@ -12,7 +12,7 @@ interface abc
 }
 
 /* -------------------------------------------------------
-The above program consists of a class Demo and Main()  prints 
+The above program consists of a class InterfaceDemo1 and Main()  prints 
 Hello Interfaces
 The above program also defines an interface abc. 
 Interface abc is empty at this point of time. 
