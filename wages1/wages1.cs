@@ -2,12 +2,12 @@ using System;
 namespace IntroCS
 {
    class Wages
-   {                                                   //heading chunk
-      /// Return the total weekly wages for a worker working 
-      /// totalHours with a given regular hourlyWage.  
+   {  //heading chunk
+      /// Return the total weekly wages for a worker working
+      /// totalHours with a given regular hourlyWage.
       /// Include overtime for hours over 40.
       static double CalcWeeklyWages(double totalHours, double hourlyWage)
-      {                                                
+      {
          double totalWages;
          if (totalHours <= 40) {
             totalWages = hourlyWage*totalHours;

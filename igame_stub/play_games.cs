@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 namespace IntroCS
 {
-   /// Starting point for Interface Lab.
+/// Starting point for Interface Lab.
    public class PlayGames
    {
       private static Random rand = new Random();
@@ -24,8 +24,8 @@ namespace IntroCS
          // write at least 2 more different types of Game classes
          // and add a new one of each type to games:
          // ...
-           
-           
+
+
          int totScore = 0;
          do {
             IGame g = PopRandom(games);

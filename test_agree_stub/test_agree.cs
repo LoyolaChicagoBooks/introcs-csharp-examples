@@ -1,14 +1,14 @@
 using System;
 namespace IntroCS
 {
-   class TestAgree  
+   class TestAgree
    {
-      
+
       public static void Main() //testing routine
       {
          Console.WriteLine(Agree("Do you understand? "));
       }
-      
+
       /// Prompt the user with a question; Return true of false.
       /// Allow certain starting characters for true (t, y) and
       /// others for false (f, n), and repeat until the response
@@ -17,6 +17,6 @@ namespace IntroCS
       {
          return true;  // so stub compiles
       }
-   }                                          
+   }
 }
 

@@ -2,13 +2,13 @@ using System;
 namespace IntroCS
 {
    class Vowels
-   {      
+   {
       static void Main() //testing routine
       {
          string s = UIF.PromptLine("Enter a line: ");
          PrintVowels(s);
-      } 
-                                       //  new chunk
+      }
+      //  new chunk
       /// Print the vowels (aeiou) in s, one per line.
       static void PrintVowels(string s)
       {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace IntroCS
 {
-   /// Use IComparable<Rational> interface to sort Rationals. 
+/// Use IComparable<Rational> interface to sort Rationals.
    class TestRationalSort
    {
       public static void Main(string[] args)

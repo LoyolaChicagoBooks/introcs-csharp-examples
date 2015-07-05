@@ -1,10 +1,10 @@
 ﻿using System;
 namespace IntroCS
 {
-   class ClockDemo 
+   class ClockDemo
    {
-       public static void Main() 
-      {                             // body chunk
+      public static void Main()
+      {  // body chunk
          Clock c = new Clock();
          Console.WriteLine("Midnight " + c.GetTimeString());
          c.SetTime(23, 58);
@@ -16,4 +16,3 @@ namespace IntroCS
       }                            // end chunk
    }
 }
-   

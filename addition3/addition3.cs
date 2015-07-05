@@ -10,10 +10,10 @@ namespace IntroCS
          string sentence = "The sum of " + x + " and " + y + " is " + sum + ".";
          return sentence;
       }
-      
+
       public static void Main()
       {
-         Console.WriteLine(SumProblemString(2, 3)); 
+         Console.WriteLine(SumProblemString(2, 3));
          Console.WriteLine(SumProblemString(12345, 53579));
          int a = UIF.PromptInt("Enter an integer: ");      //NEW
          int b = UIF.PromptInt("Enter another integer: "); //NEW

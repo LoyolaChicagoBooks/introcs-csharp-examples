@@ -4,7 +4,7 @@ class Return1
 {
    static int F(int x)
    {
-       return x*x;
+      return x*x;
    }
 
    static void Main()

@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace IntroCS
 {
    [TestFixture()]
-	public class NoteTests
+   public class NoteTests
    {
       [Test()]
       public void TestConstructor()
@@ -74,8 +74,9 @@ namespace IntroCS
          score.AddMeasures(3);
          int[] yankee = { 0, 0, 2, 4, 0, 4, 2 };
          Rational[] durations = { new Rational(1, 4), new Rational(1, 4),
-            new Rational(1, 4), new Rational(1, 4), new Rational(1, 4),
-            new Rational(1, 4), new Rational(2, 4) };
+                     new Rational(1, 4), new Rational(1, 4), new Rational(1, 4),
+                     new Rational(1, 4), new Rational(2, 4)
+         };
 
          int item = 0;
          for (int measure=0; measure < 3; measure++) {

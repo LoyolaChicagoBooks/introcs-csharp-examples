@@ -1,9 +1,9 @@
-﻿using System; 
+﻿using System;
 
-class Interview2 
+class Interview2
 {
    static string InterviewSentence(string name, string time)
-   { 
+   {
       return string.Format("{0} has an interview at {1}.", name, time);
    }
 

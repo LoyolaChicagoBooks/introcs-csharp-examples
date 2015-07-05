@@ -4,8 +4,8 @@ using System.Text.RegularExpressions;
 
 namespace IntroCS
 {
-   /// Fancier alternate to UI, that throws out illegal numeric input,
-   ///   character by character, using Console.ReadKey and regular expressions.
+/// Fancier alternate to UI, that throws out illegal numeric input,
+///   character by character, using Console.ReadKey and regular expressions.
    public class UIFNT
    {
 
@@ -16,10 +16,10 @@ namespace IntroCS
 
       /*
        * Explanation of validation regex for integers
-       * 
+       *
        *    ^           match beginning of string (the candidate number)
        *    [\+-]       optional sign
-       *    \d+         match 1 or more digits (\d); note that the 1st parameter 
+       *    \d+         match 1 or more digits (\d); note that the 1st parameter
        *                uses \d* to allow zero or more until we build the full string
        *    $           match the end of string (to make sure there is no extraneous input)
        */
@@ -39,16 +39,16 @@ namespace IntroCS
        *      (\d+(\.)?\d*)     there is a positive number of digits before the optional decimal point
        *    )
        *    $                   end of string
-       * 
+       *
        *    Note: If the decimal point is missing, this is ok;
        *    it means that the expression \d+\d* or \d*\d+ is being tested (to ensure a positive number of digits overall!
        */
 
-      public static Regex decimalValidate = 
+      public static Regex decimalValidate =
          new Regex(@"^[\+-]?((\d*(\.)?\d+)|(\d+(\.)?\d*))$");
-      public static Regex doubleAccept = 
+      public static Regex doubleAccept =
          new Regex(@"^([\+-]?\d*(\.\d*)?|[\+-]?(\d+\.)\d*)((\d\.|\d)[eE][\+-]?\d*)?$");
-      public static Regex doubleValidate = 
+      public static Regex doubleValidate =
          new Regex(@"^([\+-]?\d+(\.\d*)?|[\+-]?\.\d+)([eE][\+-]?\d+)?$");
 
       public static string PromptLine(string prompt)
@@ -81,25 +81,25 @@ namespace IntroCS
             }
             else {
                inputChars.Append(key.KeyChar);
-               if (accept.IsMatch(inputChars.ToString())) 
+               if (accept.IsMatch(inputChars.ToString()))
                   Console.Write(key.KeyChar);
                else
                   inputChars.Remove(inputChars.Length - 1, 1);
-            } 
+            }
          }
          return inputChars.ToString();
       }
 
-      /// compare integer strings: 
+      /// compare integer strings:
       ///   any lengths, but both positive or both negative
       /// true if magnitude of s <= magnitude of lim
       public static bool IntStrMagLessEq(string s, string lim)
       {
          return s.Length < lim.Length || //automatically lower magnitude
-            s.Length == lim.Length && s.CompareTo(lim) <= 0;
+                s.Length == lim.Length && s.CompareTo(lim) <= 0;
       }     // for same length, lexicographical comparison works
 
-      public static int PromptUnsignedInt(string prompt) 
+      public static int PromptUnsignedInt(string prompt)
       {
          while (true) {
             Console.Write (prompt);
@@ -110,13 +110,13 @@ namespace IntroCS
          }
       }
 
-      public static int PromptInt(string prompt) 
+      public static int PromptInt(string prompt)
       {
          while (true) {
             Console.Write (prompt);
             string s = AcceptInput (intAccept, intValidate);
             if (s.StartsWith("-") && IntStrMagLessEq(s, ""+int.MinValue) ||
-               !s.StartsWith("-") && IntStrMagLessEq(s, ""+int.MaxValue) )
+                  !s.StartsWith("-") && IntStrMagLessEq(s, ""+int.MaxValue) )
                return int.Parse (s);
             Console.WriteLine ("Integer out of range!");
          }
@@ -132,11 +132,11 @@ namespace IntroCS
          return double.Parse(AcceptInput(doubleAccept, doubleValidate));
       }
 
-      public static int PromptIntInRange(string prompt, 
-         int lowLim, int highLim)
+      public static int PromptIntInRange(string prompt,
+                                         int lowLim, int highLim)
       {
          string longPrompt = string.Format("{0} ({1} through {2}) ",
-            prompt, lowLim, highLim);
+                                           prompt, lowLim, highLim);
          int number = PromptInt(longPrompt);
          while (number < lowLim || number > highLim) {
             Console.WriteLine("{0} is out of range!", number);
@@ -145,11 +145,11 @@ namespace IntroCS
          return number;
       }
 
-      public static double PromptDoubleInRange(string prompt, 
-         double lowLim, double highLim)
+      public static double PromptDoubleInRange(string prompt,
+            double lowLim, double highLim)
       {
          string longPrompt = string.Format("{0} ({1} through {2}) ",
-            prompt, lowLim, highLim);
+                                           prompt, lowLim, highLim);
          double number = PromptDouble(longPrompt);
          while (number < lowLim || number > highLim) {
             Console.WriteLine("{0} is out of range!", number);

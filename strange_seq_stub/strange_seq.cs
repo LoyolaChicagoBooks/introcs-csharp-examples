@@ -9,10 +9,10 @@ namespace IntroCS
       {
          return 0; // so stub compiles
       }
-      
-      
+
+
       /// Iterate the Jump function, starting with the positive
-      ///   integer value n, stopping when the latest value is 1.  
+      ///   integer value n, stopping when the latest value is 1.
       ///   Print each value.  Exanples:
       ///
       ///   PrintStrangeSequence(1) prints:
@@ -28,17 +28,17 @@ namespace IntroCS
       {
          //complete
       }
-      
+
       /// Same idea as PrintStrangeSeq, but instead of
       /// printing the whole sequence, just count the
       /// number of entries.  For example,
-      ///   CountStrangeSequence(1) returns 1; 
+      ///   CountStrangeSequence(1) returns 1;
       ///   CountStrangeSequence(5) returns 6.
       static int CountStrangeSequence(int n)
       {
          return 0;  // so stub compiles
       }
-      
+
       static void Main() //testing routine
       {
          int n = UIF.PromptInt("Enter a positive integer: ");
@@ -46,7 +46,7 @@ namespace IntroCS
          Console.WriteLine("One jump from {0} is {1}.", n, Jump(n));
          Console.WriteLine("Sequence until 1:");
          PrintStrangeSequence(n);
-         Console.WriteLine("{0} elements in the sequence.", 
+         Console.WriteLine("{0} elements in the sequence.",
                            CountStrangeSequence(n));
       }
    }

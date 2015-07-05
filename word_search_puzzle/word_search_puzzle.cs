@@ -33,7 +33,7 @@ namespace IntroCS
                else if (orientation == 2)
                   wordInserted = InsertDiagonal(puzzle, x, y, wordAsUppercase);
             }
-          }
+         }
       }
 
       // Across means on dimension 1 (y)
@@ -113,12 +113,12 @@ namespace IntroCS
 
       /// Insert word if possible starting at
       /// (x, y),  moving in dirrction (dx, dy).
-      /// Return true if the change succeeds. 
+      /// Return true if the change succeeds.
       public static bool Insert(char[,] puzzle, int x, int y,
                                 int dx, int dy, string word) {
          // check whether all of the positions are '.' or match the letter at the position
          if (x + word.Length*dx > puzzle.GetLength(0) ||
-             y + word.Length*dy > puzzle.GetLength(1))
+               y + word.Length*dy > puzzle.GetLength(1))
             return false;
 
          for (int i=0; i < word.Length; i++) {
@@ -171,7 +171,8 @@ namespace IntroCS
       {
          char [,] puzzle = new char[10, 12];
          string[] words = new string[] { "this", "word", "search", "program", "is", "gonna", "rock",
-           "but", "it", "is", "coming", "slowly"};
+                                         "but", "it", "is", "coming", "slowly"
+                                       };
 
          Console.WriteLine ("Dimension 0 = {0}, 1 = {1}", puzzle.GetLength (0), puzzle.GetLength (1));
          Console.WriteLine ("Creating empty word search.");

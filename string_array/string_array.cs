@@ -4,7 +4,7 @@ namespace IntroCS
 {
    public class StringArray
    {
-                                 // chunk PrintStrings                              
+      // chunk PrintStrings
       /// Print the strings in data, one per line.
       public static void PrintStrings(string[] data)
       {
@@ -12,12 +12,12 @@ namespace IntroCS
             Console.WriteLine(s);
          }
       }
-                                // chunk InputNStrings                              
+      // chunk InputNStrings
       /// Return an array with string data obtained from the user.
       /// The length of the array and the number of entries to
       ///   prompt the user for is n.
       public static string[] InputNStrings(int n)
-      {                         
+      {
          string[] lines = new string[n];
          Console.WriteLine ("Enter {0} string(s).", n);
          for (int i = 0; i < n; i++) {
@@ -25,7 +25,7 @@ namespace IntroCS
          }
          return lines;
       }
-                                  // chunk NewUpper                              
+      // chunk NewUpper
       /// Return an array that is the same as data
       /// except all strings are in upper case.
       public static string[] NewUpper(string[] data)
@@ -36,7 +36,7 @@ namespace IntroCS
          }
          return upper;
       }
-                             // chunk AllToUpper                              
+      // chunk AllToUpper
       /// Modifiy the array data so
       ///   all strings are in upper case.
       public static void AllToUpper(string[] data)
@@ -45,6 +45,6 @@ namespace IntroCS
             data[i] = data[i].ToUpper();
          }
       }
-   }                                                    
+   }
 }
 

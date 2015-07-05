@@ -3,7 +3,7 @@ namespace IntroCS
 {
    class ModMultTable
    {
-      
+
       static void Main()
       {
          string prompt = "\nEnter modulus (0 to quit): ";
@@ -14,7 +14,7 @@ namespace IntroCS
             mod = UI.PromptInt(prompt);
          }
       }
-                                            // start chunk
+      // start chunk
       /// Print a table for modular multiplication mod n.
       static void MultTable(int n)
       {
@@ -26,9 +26,9 @@ namespace IntroCS
             Console.Write(colFormat, i);
          }
          Console.WriteLine();
-         
+
          Console.WriteLine(StringOfReps("-",(numberWidth+1)*(n+1) + 1));
-         
+
          for (int r = 0; r < n; r++) { //rows of table body
             Console.Write(rowHeaderFormat, r);
             for (int c = 0; c < n; c++) {
@@ -37,7 +37,7 @@ namespace IntroCS
             Console.WriteLine();
          }
       }
-                                             // end chunk
+      // end chunk
       /// Return s repeated n times.
       static string StringOfReps(string s, int n)
       {
@@ -47,8 +47,8 @@ namespace IntroCS
          }
          return ret;
       }
-      
-      
+
+
    }
 }
 

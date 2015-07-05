@@ -38,7 +38,7 @@ with any other problem!");
          char[] sep = "\t !@#$%^&*()_+{}|[]\\:\";<>?,./".ToCharArray();
          string[] words = fromUser.ToLower().Split(sep);
          foreach (string word in words) {
-            if (responses.ContainsKey(word)){
+            if (responses.ContainsKey(word)) {
                return responses[word];
             }
          }
@@ -83,26 +83,26 @@ performance problems.
 Have you got a problem with our software?";
          d["performance"] = @"Performance was quite adequate in all our tests.
 Are you running any other processes in the background?";
-         d["bug"] = @"Well, you know, all software has some bugs. 
+         d["bug"] = @"Well, you know, all software has some bugs.
 But our software engineers are working very hard to fix them. 
 Can you describe the problem a bit further?";
-         d["windows"] = @"This is a known bug to do with the Windows 
+         d["windows"] = @"This is a known bug to do with the Windows
 operating system.  Please report it to Microsoft. 
 There is nothing we can do about this.";
-         d["macintosh "] = @"This is a known bug to do with the Mac 
+         d["macintosh "] = @"This is a known bug to do with the Mac
 operating system.  Please report it to Apple.
 There is nothing we can do about this.";
-         d["expensive"] = @"The cost of our product is quite competitive. 
+         d["expensive"] = @"The cost of our product is quite competitive.
 Have you looked around and really compared our features?";
          d["installation"] =
             @"The installation is really quite straightforward.
 We have tons of wizards that do all the work for you. 
 Have you read the installation instructions?";
-         d["memory"] = @"If you read the system requirements carefully, 
+         d["memory"] = @"If you read the system requirements carefully,
 you will see that the specified memory requirements 
 are 1.5 gigabytes.  You really should upgrade your memory. 
 Anything else you want to know?";
-         d["linux"] = @"We take Linux support very seriously. 
+         d["linux"] = @"We take Linux support very seriously.
 But there are some problems.
 Most have to do with incompatible glibc versions.
 Can you be a bit more precise?";

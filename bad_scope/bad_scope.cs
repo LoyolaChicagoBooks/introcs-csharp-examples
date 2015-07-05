@@ -8,7 +8,7 @@ class BadScope
       F();
    }
 
-   static void F()  
+   static void F()
    {  // F doesn't know about the x defined in Main
       //Console.WriteLine(x); //ERROR if uncommented
    }

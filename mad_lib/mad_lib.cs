@@ -3,13 +3,13 @@
 class MadLib
 {
    static void Main()
-   { 
+   {
       Console.WriteLine("Help make a Mad Lib!");
       Console.Write("Enter an animal: ");
-      string animal = Console.ReadLine(); // for {0}            
-      Console.Write("Enter a food: "); 
-      string food = Console.ReadLine();   // for (1}            
-      Console.Write("Enter a city: "); 
+      string animal = Console.ReadLine(); // for {0}
+      Console.Write("Enter a food: ");
+      string food = Console.ReadLine();   // for (1}
+      Console.Write("Enter a city: ");
       string city = Console.ReadLine();   // for {2}
 
       string storyFormat = @"
@@ -25,7 +25,7 @@ the {0} became homesick, so the
 explorer brought it back to the jungle,
 leaving a large supply of {1}.
 
-The End";                                               
+The End";
 
       Console.WriteLine(storyFormat, animal, food, city);
    }

@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 namespace IntroCS
 {
-   
-   /// Note all commands (This class will be changed). 
+
+/// Note all commands (This class will be changed).
    public class CommandMapper
    {
       private static string[] commands = {"help", "go", "quit"};
@@ -16,7 +16,7 @@ namespace IntroCS
          return ret;
       }
 
-      /// Check whether aString is a valid command word. 
+      /// Check whether aString is a valid command word.
       /// Return true if it is, false if it isn't.
       public static bool isCommand(string aString)
       {

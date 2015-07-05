@@ -5,7 +5,7 @@ using System;
 class TestWhile1
 {
    static void Main()
-   {                  // main chunk
+   {  // main chunk
       int i = 4;
       while (i < 9) {
          Console.WriteLine(i);

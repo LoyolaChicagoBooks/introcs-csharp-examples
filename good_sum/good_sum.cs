@@ -1,6 +1,6 @@
-using System; 
+using System;
 
-class GoodSum 
+class GoodSum
 {
    static void Main()
    {

@@ -1,14 +1,14 @@
 ﻿using System;
 namespace IntroCS
 {
-   /// a class that is more than a container
+/// a class that is more than a container
    class Averager
    {
       private int dataCount;
       private double sum;
 
       /// new Averager with no data
-      public Averager() 
+      public Averager()
       {
          Clear();
       }
@@ -19,14 +19,14 @@ namespace IntroCS
          dataCount++;
       }
 
-      public int GetDataCount() 
+      public int GetDataCount()
       {
          return dataCount;
       }
 
       /// Gets the average of the data
       ///   or NaN if no data.
-      public double GetAverage() 
+      public double GetAverage()
       {
          return sum/dataCount;  // is NaN if dataCount is 0
       }
@@ -39,8 +39,8 @@ namespace IntroCS
 
       public override string ToString ()
       {
-         return string.Format("items: {0}; average: {1}", 
-            GetDataCount(), GetAverage());
-      } 
+         return string.Format("items: {0}; average: {1}",
+                              GetDataCount(), GetAverage());
+      }
    }
 }

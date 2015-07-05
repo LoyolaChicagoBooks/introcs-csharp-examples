@@ -15,11 +15,10 @@ namespace IntroCS
          StringArray.AllToUpper (user);
          StringArray.PrintStrings(user);
          Console.WriteLine (
-           "Now using anonymous array from {\"What\", \"is\", \"this?\"}");
+            "Now using anonymous array from {\"What\", \"is\", \"this?\"}");
          Console.WriteLine (" copied to upper case:");
          StringArray.PrintStrings(
             StringArray.NewUpper(new[] {"What", "is", "this?"}));
       }
-   }                                                    
+   }
 }
-   

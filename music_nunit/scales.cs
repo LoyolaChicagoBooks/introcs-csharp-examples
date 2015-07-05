@@ -6,7 +6,8 @@ namespace IntroCS
    {
       // chunk-tones-begin
       static string[] tones = { "C", "C#", "D", "D#", "E", "F",
-         "F#", "G", "G#", "A", "A#", "B" };
+                                "F#", "G", "G#", "A", "A#", "B"
+                              };
       // chunk-tones-end
 
       // chunk-findtone-begin
@@ -49,9 +50,9 @@ namespace IntroCS
 
 
       // chunk-main-begin
-      public static void Main (string[] args) 
+      public static void Main (string[] args)
       {
-         int[] scale = new int[8]; 
+         int[] scale = new int[8];
          int[] major = { 2, 2, 1, 2, 2, 2, 1 };
          int[] minor = { 2, 1, 2, 2, 1, 2, 2 };
 

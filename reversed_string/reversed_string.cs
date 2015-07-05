@@ -9,7 +9,7 @@ namespace IntroCS
          string s = UIF.PromptLine ("Enter a line: ");
          Console.WriteLine ("Reversed is:\n{0}", Reverse(s));
       }
-                                  // chunk
+      // chunk
       /// Return s in reverse order.
       /// If s is "drab", return "bard".
       static string Reverse (string s)

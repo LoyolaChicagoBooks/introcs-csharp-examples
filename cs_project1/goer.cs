@@ -1,12 +1,12 @@
 using System;
 namespace IntroCS
 {
-   
-   /// Response to try to go to a new place.
+
+/// Response to try to go to a new place.
    public class Goer
    {
       private Game game;
-      
+
       /// Try to go to one direction. If there is an exit, enter the new
       /// place, otherwise print an error message.
       /// Return false(does not end game)
@@ -29,7 +29,7 @@ namespace IntroCS
          }
          return false;
       }
-   
+
       public string Help()
       {
          return @"Enter
@@ -37,7 +37,7 @@ namespace IntroCS
 to exit the current place in the specified direction.
 The direction should be in the list of exits for the current place.";
       }
-   
+
       /// Constructor for objects of class Goer
       public Goer(Game game)
       {

@@ -14,7 +14,7 @@
    public void xyz()
    {
       System.Console.WriteLine("In xyz");
-   }  
+   }
 
    public void pqr()
    {
@@ -30,7 +30,7 @@ interface abc
 interface def// extra added interface
 {
    void pqr();
-}   
+}
 
 /*
 A class can satisfy more than one interface.
@@ -39,7 +39,7 @@ Each must be announced in the class heading.
 We can take an object of that class type, refDemo, and use it to
 initialize a variable of any interface type satisfied by the class,
 as we initialized refabc and refdef.
-When a variable is declared as a particular interface type, 
+When a variable is declared as a particular interface type,
 any method from that interface can be called using that
 variable.
 

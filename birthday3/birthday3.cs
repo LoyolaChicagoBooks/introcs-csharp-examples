@@ -3,9 +3,9 @@ using System;
 class Birthday3
 {
    static void Main()
-   {   
-       HappyBirthdayEmily();
-       HappyBirthdayAndre();
+   {
+      HappyBirthdayEmily();
+      HappyBirthdayAndre();
    }
 
    static void HappyBirthdayEmily()
@@ -17,7 +17,7 @@ class Birthday3
    }
 
    static void HappyBirthdayAndre()
-   {   
+   {
       Console.WriteLine ("Happy Birthday to you!");
       Console.WriteLine ("Happy Birthday to you!");
       Console.WriteLine ("Happy Birthday, dear Andre.");

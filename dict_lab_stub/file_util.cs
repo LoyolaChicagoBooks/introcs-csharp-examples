@@ -5,17 +5,17 @@ using System.Collections.Generic;
 namespace IntroCS
 {
    public class FileUtil
-   {                                          // start ReadParagraph chunk
+   {  // start ReadParagraph chunk
       /// Return a string consisting of a sequence of nonempty lines read
       /// from reader. All the newlines at the ends of these lines are included.
       /// The function ends after reading (but not including) an empty line.
       public static string ReadParagraph(StreamReader reader)
-      {                                       // end heading chunk
+      {  // end heading chunk
 
          // REPLACE the next line with your lines of code
          return "You have not coded ReadParagraph yet!\n";
       }
-                                         // start GetParagraphs chunk
+      // start GetParagraphs chunk
       /// Read the remaining empty-line terminated paragraphs
       /// from reader into a new list of paragraph strings,
       /// and return the list.
@@ -32,7 +32,7 @@ namespace IntroCS
 
          return all;
       }
-                                         // start  GetDictionary chunk
+      // start  GetDictionary chunk
       /// Return a new Dictionary, taking data for it from reader.
       /// Reader contains key-value pairs, where each single-line key is
       /// followed by a possibly multi-line paragraph value that is terminated
@@ -47,8 +47,8 @@ namespace IntroCS
 
          return d;
       }
-                                          // end GetDictionary chunk
- 
+      // end GetDictionary chunk
+
       //Altered Extra credit documentation for GetDictionary:
       /// Return a new Dictionary, taking data for it from reader.
       /// Reader generates key-value pairs, where one or more space

@@ -3,7 +3,7 @@ using System;
 class ModMultTable
 {
    static void Main()
-   {                                         // start chunk
+   {  // start chunk
       //heading
       Console.Write("* | ");
       for ( int i = 0; i < 7; i++) {  //column headings

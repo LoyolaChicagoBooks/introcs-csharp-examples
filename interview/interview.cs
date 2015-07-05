@@ -1,6 +1,6 @@
-﻿using System; 
+﻿using System;
 
-class Interview 
+class Interview
 {
    static void Main()  // basic prompt/read/write example
    {

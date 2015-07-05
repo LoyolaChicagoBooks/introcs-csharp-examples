@@ -1,4 +1,4 @@
-﻿class InterfaceDemo7 : abc  
+﻿class InterfaceDemo7 : abc
 {
    public static void Main()
    {
@@ -6,13 +6,13 @@
       abc[] items = {new InterfaceDemo7(), new Sample()}; // compare types!
       foreach (abc element in items) {
          element.xyz ();
-      }    
+      }
    }
 
    public void xyz()
    {
       System.Console.WriteLine("In InterfaceDemo7 :: xyz");
-   }  
+   }
 }
 
 interface abc
@@ -25,14 +25,14 @@ class Sample : abc
    public void xyz()
    {
       System.Console.WriteLine("In Sample :: xyz");
-   }  
+   }
 }
 
 /*
 Same effect as version 6, but now we declare an array
 with *interface* type.  We can place in it
 data of different *class* types
-that satisfy this same *interface* type. 
+that satisfy this same *interface* type.
 
 Since the array is declared to have elements
 of interface type abc, the foreach iteration variable,

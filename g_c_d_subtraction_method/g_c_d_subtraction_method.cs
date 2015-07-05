@@ -28,7 +28,7 @@ namespace IntroCS
          int a = UI.PromptInt ("Enter an integer: ");
          int b = UI.PromptInt ("Enter another integer: ");
          Console.WriteLine ("The final result is: gcd({0}, {1}) = {2}.",
-                        a, b, GreatestCommonDivisor (a, b));
+                            a, b, GreatestCommonDivisor (a, b));
       }
    }
 }
