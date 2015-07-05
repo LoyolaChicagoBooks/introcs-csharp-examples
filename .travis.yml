@@ -12,6 +12,7 @@ env:
  global:
   - EnableNuGetPackageRestore=true 
  matrix:
+  - MONO_SCRIPT="3" MONO_VER="4.0.2"
   - MONO_SCRIPT="3" MONO_VER="3.10.0"
   - MONO_SCRIPT="2" MONO_VER="2.10.11"
 
