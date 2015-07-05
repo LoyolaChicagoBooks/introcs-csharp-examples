@@ -10,11 +10,11 @@ namespace IntroCS
       public static void Main(string[] args)
       {
          // TEMPORARY line to get oriented to the file system:
-         Console.WriteLine("Current directory: " + 
+         Console.WriteLine("Current directory: " +
                            Directory.GetCurrentDirectory());
       }
-                                           // codeIndex chunk                                          
-      /// Take the first letter code for a catagory, and 
+      // codeIndex chunk
+      /// Take the first letter code for a catagory, and
       /// return the index of that category in categories.
       static int codeIndex(string code, string[] categories)
       {

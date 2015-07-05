@@ -28,7 +28,7 @@ namespace IntroCS
       }
    }
 
-   // Agile approach: Let's allow one voice per measure.
+// Agile approach: Let's allow one voice per measure.
 
    public class Measure {
       private List<Note> voice;
@@ -59,8 +59,8 @@ namespace IntroCS
       }
 
       public Note GetNote(int position) {
-         Note noNote = new Note(0, 0, new Rational(0, 0)); 
-                       // a note with 0 tone, octave, duration 
+         Note noNote = new Note(0, 0, new Rational(0, 0));
+         // a note with 0 tone, octave, duration
          if (position <  voice.Count)
             return voice[position];
          else
@@ -68,7 +68,7 @@ namespace IntroCS
       }
    }
 
-   // In this first version, we're going to support any base note in major or minor.
+// In this first version, we're going to support any base note in major or minor.
 
    public class Scale {
 
@@ -83,7 +83,8 @@ namespace IntroCS
 
       // chunk-tones-begin
       public static string[] tones = { "C", "C#", "D", "D#", "E", "F",
-         "F#", "G", "G#", "A", "A#", "B" };
+                                       "F#", "G", "G#", "A", "A#", "B"
+                                     };
       // chunk-tones-end
 
       // chunk-findtone-begin
@@ -139,11 +140,11 @@ namespace IntroCS
 
    }
 
-   // We are starting with a fairly simple score structure that assumes the time/key signature never change.
-   // Again we are taking an agile approach but will extend this later.
+// We are starting with a fairly simple score structure that assumes the time/key signature never change.
+// Again we are taking an agile approach but will extend this later.
 
-   // All staff labels (e.g. Piano, S, A, T, B) must be specified up front. Keep in mind that Piano must
-   // be specified as PianoLine1 and PianoLine2 if you want both treble and bass clefs.
+// All staff labels (e.g. Piano, S, A, T, B) must be specified up front. Keep in mind that Piano must
+// be specified as PianoLine1 and PianoLine2 if you want both treble and bass clefs.
 
    public class Score {
       private Rational timeSignature;

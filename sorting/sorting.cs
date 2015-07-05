@@ -1,9 +1,9 @@
 using System;
- 
+
 namespace IntroCS
 {
    public class Sorting
-   {                               // chunk-exchange-begin
+   {  // chunk-exchange-begin
       /// Exchange the elements of data at indices m and n.
       public static void Exchange(int[] data, int m, int n)
       {
@@ -11,7 +11,7 @@ namespace IntroCS
          data [m] = data[n];
          data [n] = temporary;
       }
-                                   // chunk-bubblesort-begin
+      // chunk-bubblesort-begin
       public static void IntArrayBubbleSort (int[] data)
       {
          int N = data.Length;
@@ -23,7 +23,7 @@ namespace IntroCS
             }
          }
       }
-                                 // chunk-insertionsort-begin
+      // chunk-insertionsort-begin
       public static void IntArrayInsertionSort (int[] data)
       {
          int N = data.Length;
@@ -33,17 +33,17 @@ namespace IntroCS
             }
          }
       }
-                             // chunk-selectionsort-begin
-      /// Among the indices >= start for data, 
+      // chunk-selectionsort-begin
+      /// Among the indices >= start for data,
       /// return the index of the minimal element.
       public static int IntArrayMin (int[] data, int start)
       {
-         int N = data.Length, minPos = start; 
+         int N = data.Length, minPos = start;
          for (int pos=start+1; pos < N; pos++)
-         if (data[pos] < data[minPos]) {
+            if (data[pos] < data[minPos]) {
                minPos = pos;
-         }
-         return minPos; 
+            }
+         return minPos;
       }
 
       public static void IntArraySelectionSort (int[] data)
@@ -56,7 +56,7 @@ namespace IntroCS
             }
          }
       }
-                                          // chunk-shellsort-begin
+      // chunk-shellsort-begin
       /// Shell sort of data using specified swapping intervals.
       public static void IntArrayShellSort (int[] data, int[] intervals)
       {
@@ -66,22 +66,22 @@ namespace IntroCS
             int interval = intervals[k];
             for (int m=0; m<interval; m++) {
                for (int j=m+interval; j<N; j+=interval) {
-                  for (int i=j; i>=interval && data[i]<data[i-interval]; 
-                       i-=interval) {
+                  for (int i=j; i>=interval && data[i]<data[i-interval];
+                        i-=interval) {
                      Exchange (data, i, i - interval);
                   }
                }
             }
          }
       }
-                                       // chunk-shellsort-naive-begin
+      // chunk-shellsort-naive-begin
       public static void IntArrayShellSortNaive (int[] data)
       {
          int[] intervals = { 1, 2, 4, 8 };
          IntArrayShellSort (data, intervals);
       }
-                                       // chunk-shellsort-better-begin 
-      /// Generates the intervals for Shell sort on a  
+      // chunk-shellsort-better-begin
+      /// Generates the intervals for Shell sort on a
       /// list of length n via an algorithm from Knuth.
       static int[] GenerateIntervals (int n)
       {
@@ -89,7 +89,7 @@ namespace IntroCS
             return new int[0];
          }
          int t = Math.Max (1, (int)Math.Log (n, 3) - 1);
-         int[] intervals = new int[t];       
+         int[] intervals = new int[t];
          intervals [0] = 1;
          for (int i=1; i < t; i++)
             intervals [i] = 3 * intervals [i - 1] + 1;
@@ -101,13 +101,13 @@ namespace IntroCS
          int[] intervals = GenerateIntervals (data.Length);
          IntArrayShellSort (data, intervals);
       }
-                                    // chunk-quicksort-begin
+      // chunk-quicksort-begin
       /// Sort elements of data in index range [lowI, highI].
-      public static void IntArrayQuickSort (int[] data, 
+      public static void IntArrayQuickSort (int[] data,
                                             int lowI, int highI)
       {
          int afterSmall = lowI, beforeBig = highI;
-         int pivot = data[(lowI + highI) / 2];  
+         int pivot = data[(lowI + highI) / 2];
          // in loop data[i] <= pivot if i < afterSmall
          //         data[i] >= pivot if i > beforeBig
          //         region with aftersmall <= i <= beforeBig
@@ -123,9 +123,9 @@ namespace IntroCS
                beforeBig--;
             }
          }  // after loop: beforeBig < afterSmall, and
-         //      data[i] <= pivot for i <= beforeBig, 
-         //      data[i] == pivot for i if beforeBig < i < afterSmall, 
-         //      data[i] >= pivot for i >= afterSmall. 
+         //      data[i] <= pivot for i <= beforeBig,
+         //      data[i] == pivot for i if beforeBig < i < afterSmall,
+         //      data[i] >= pivot for i >= afterSmall.
          if (lowI < beforeBig) // at least two elements
             IntArrayQuickSort (data, lowI, beforeBig);
          if (afterSmall < highI) // at least two elements
@@ -137,7 +137,7 @@ namespace IntroCS
          if (data.Length > 1)
             IntArrayQuickSort (data, 0, data.Length - 1);
       }
-                                          // chunk-random-begin
+      // chunk-random-begin
       /// Fill data with pseudo-random data seeded by randomSeed.
       public static void IntArrayGenerate (int[] data, int randomSeed)
       {

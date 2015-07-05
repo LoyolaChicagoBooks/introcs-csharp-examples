@@ -15,12 +15,12 @@ namespace IntroCS
          string welcome = FileUtil.ReadParagraph(reader);
          string goodbye = FileUtil.ReadParagraph(reader);
          List<string> guessList =                  // rest of the file gives a
-                   FileUtil.GetParagraphs(reader); //  list of random responses
+            FileUtil.GetParagraphs(reader); //  list of random responses
          reader.Close();
 
          reader = FIO.OpenReader("help_not_responses.txt");
          Dictionary<string, string> responses =
-                                        FileUtil.GetDictionary(reader);
+            FileUtil.GetDictionary(reader);
          reader.Close();
 
          Console.Write(welcome);
@@ -38,14 +38,14 @@ namespace IntroCS
       }
 
       /// Take input fromUser and use guessList and responses to
-      ///  determine and return a string response. 
+      ///  determine and return a string response.
       public static string Response(string fromUser, List<string> guessList,
                                     Dictionary<string, string> responses)
       {
          char[] sep = "\t !@#$%^&*()_+{}|[]\\:\";<>?,./".ToCharArray();
          string[] words = fromUser.ToLower().Split(sep);
          foreach (string word in words) {
-            if (responses.ContainsKey(word)){
+            if (responses.ContainsKey(word)) {
                return responses[word];
             }
          }

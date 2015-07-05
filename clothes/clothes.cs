@@ -4,7 +4,7 @@ namespace IntroCS
    class Clothes
    {
       static void Main()
-      {                               // main chunk
+      {  // main chunk
          double temperature = UIF.PromptDouble("What is the temperature? ");
          if (temperature > 70) {
             Console.WriteLine("Wear shorts.");

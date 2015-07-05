@@ -9,8 +9,8 @@ namespace IntroCS
          string s = UIF.PromptLine("Enter a line: ");
          Console.WriteLine ("Reversed:");
          PrintReversed("\n"+s);
-      } 
-                                // chunk
+      }
+      // chunk
       /// Print s in reverse order; no extra newlines
       static void PrintReversed(string s)
       {
@@ -20,5 +20,5 @@ namespace IntroCS
             i--;
          }
       }
-   }                           
+   }
 }

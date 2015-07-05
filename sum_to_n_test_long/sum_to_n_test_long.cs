@@ -2,7 +2,7 @@ using System;
 namespace IntroCS
 {
    class SumToNTest
-   {     
+   {
       // Return the sum of the numbers from 1 through n.
       static long SumToN(int n)  //CHANGED:  returns long
       {
@@ -13,7 +13,7 @@ namespace IntroCS
          }
          return sum;
       }
-      
+
       static void Main()
       {
          int n = UIF.PromptInt("Enter the largest number in the sum: ");

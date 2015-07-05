@@ -1,0 +1,6 @@
+This command will reformat the C# files using the following rules:
+
+- 3 spaces of indentation (no tabs)
+- indented namespaces
+
+astyle -s3 --recursive --indent-namespaces '*.cs'

@@ -1,17 +1,23 @@
 using System;
 namespace IntroCS
 {
-   /// This class holds information about a command that was issued by the user.
-   /// A command currently consists of two strings: a command word and a second
-   /// word (for example, if the command was "take map", then the two strings
-   /// obviously are "take" and "map").
-   /// If the command had only one word, then the second word is <null>.
-   /// modified from  Michael Kolling and David J. Barnes
+/// This class holds information about a command that was issued by the user.
+/// A command currently consists of two strings: a command word and a second
+/// word (for example, if the command was "take map", then the two strings
+/// obviously are "take" and "map").
+/// If the command had only one word, then the second word is <null>.
+/// modified from  Michael Kolling and David J. Barnes
    public class Command
    {
-      public string CommandWord {get; private set;}
-      public string SecondWord {get; private set;}
-   
+      public string CommandWord {
+         get;
+         private set;
+      }
+      public string SecondWord {
+         get;
+         private set;
+      }
+
       public static Command getCommand()
       {
          string cmd;
@@ -36,7 +42,7 @@ namespace IntroCS
          CommandWord = firstWord;
          SecondWord = secondWord;
       }
-      
+
       /// Return true if the command has a second word.
       public bool hasSecondWord()
       {

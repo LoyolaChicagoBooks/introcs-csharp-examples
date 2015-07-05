@@ -3,10 +3,10 @@ using System;
 namespace IntroCS
 {
    public class BinarySearching
-   {                                     // chunk-binarysearch-begin
+   {  // chunk-binarysearch-begin
       /// Return the index of item in a non-empty sorted array data,
       /// or return -1 if item is not in the array.
-      public static int IntArrayBinarySearch(int[] data, int item) 
+      public static int IntArrayBinarySearch(int[] data, int item)
       {
          int min = 0, max = data.Length-1;
          while(min <= max) {
@@ -17,13 +17,13 @@ namespace IntroCS
                min = mid + 1;
             else
                max = mid - 1;
-         } 
+         }
          return -1;
       }
-                                          // chunk-binarysearch-end
-      /// Print the part of data for indices in range [min,max]; 
+      // chunk-binarysearch-end
+      /// Print the part of data for indices in range [min,max];
       /// other spots are blank; works for up to 3 character numbers.
-      public static void IntArrayPrint(int[] data, int min, int max) 
+      public static void IntArrayPrint(int[] data, int min, int max)
       {
          for (int i=0; i < data.Length; i++) {
             string number = "";
@@ -45,7 +45,7 @@ namespace IntroCS
       }
 
       /// Binary search with step by step display
-      public static int IntArrayBinarySearchPrinted(int[] data, int item) 
+      public static int IntArrayBinarySearchPrinted(int[] data, int item)
       {
          int N=data.Length, min = 0, max= N-1;
          Console.WriteLine("array indices:");
@@ -61,8 +61,8 @@ namespace IntroCS
                min = mid + 1;
             else
                max = mid - 1;
-         } 
+         }
          return -1;
       }
-   }                                   
+   }
 }

@@ -2,18 +2,18 @@ using System;
 using System.Collections.Generic;
 namespace IntroCS
 {
-   
-   ///  This class is the main class of "Loyola World",
-   ///  the shell of a text adventure game stub.
-   /// 
-   ///  This main class creates and initialises all places and Action objects, 
-   ///  and runs the main command processing loop.
-   ///  
-   ///  All commands are executed by objects satifying the Response interface.
-   /// 
-   ///  This shell is inspired by the Game of Zuul
-   ///  by authors  Michael Kolling and David J. Barnes. 
-   public class Game 
+
+///  This class is the main class of "Loyola World",
+///  the shell of a text adventure game stub.
+///
+///  This main class creates and initialises all places and Action objects,
+///  and runs the main command processing loop.
+///
+///  All commands are executed by objects satifying the Response interface.
+///
+///  This shell is inspired by the Game of Zuul
+///  by authors  Michael Kolling and David J. Barnes.
+   public class Game
    {
       private Place currentPlace;
       private Dictionary<string, Place> places; //places can be found by name
@@ -37,12 +37,12 @@ namespace IntroCS
          Game game = new Game();
          game.play();
       }
-       
-      /// Return the Place associated with name. 
+
+      /// Return the Place associated with name.
       public Place getNamedPlace(string name) {
          return places[name];
       }
-       
+
       /// Create the game and initialise its internal map.
       public Game()
       {
@@ -57,7 +57,7 @@ namespace IntroCS
          helpDetails["go"] = goer.Help();
          helpDetails["quit"] = quitter.Help();
       }
-   
+
       /// Main play routine.  Loops until end of play.
       public void play()
       {
@@ -68,20 +68,20 @@ namespace IntroCS
             ;  // convention with isolated semiclon for an empty loop
          Console.WriteLine("Thank you for playing.  Good bye.");
       }
-   
+
       /// Print out the opening message for the player.
       private void printWelcome()
       {
          Console.WriteLine(
-@"Welcome to Loyola!
+            @"Welcome to Loyola!
 This is a pretty boring game, unless you modify it.
 Type 'help' if you need help.
 
 {0}", currentPlace.getLongDescription());
       }
-   
+
       /// Given a command: process (that is: Execute) the command.
-      /// Return true If the command ends the game, false otherwise. 
+      /// Return true If the command ends the game, false otherwise.
       private bool processCommand(Command command)
       {
          string cmd = command.GetCommandWord();

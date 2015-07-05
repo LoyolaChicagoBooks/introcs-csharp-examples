@@ -20,4 +20,3 @@ class Addition2
       Console.WriteLine(SumProblemString(a, b));
    }
 }
-   

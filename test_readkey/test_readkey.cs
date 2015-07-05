@@ -2,8 +2,8 @@ using System;
 
 class TestReadKey
 {
-    static void Main()
-    {
+   static void Main()
+   {
       Console.WriteLine("Direct keyboard response, one key at a time, no echo:");
       Console.WriteLine("Type; press q to quit");
       char ch;

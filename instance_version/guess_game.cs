@@ -1,7 +1,7 @@
 using System;
 
 namespace IntroCS
-{                           
+{
    public class GuessGame  //OOP version of Game from static_version
    {
       private static Random r = new Random();
@@ -18,7 +18,7 @@ namespace IntroCS
       {
          this.big = big; // need this. to access same-named instance variable
       }
-      
+
       public void Play()  // Not static!  No explicit parameter
       {
          int secret = r.Next(big);    // use instance variable
@@ -29,7 +29,7 @@ namespace IntroCS
             if (guess < secret) {
                Console.WriteLine("Too small!");
             } else {
-               Console.WriteLine("Too big!");            
+               Console.WriteLine("Too big!");
             }
             guess = UI.PromptInt("Next guess: ");
             guesses++;
@@ -37,4 +37,4 @@ namespace IntroCS
          Console.WriteLine("You won on guess {0}!", guesses);
       }
    }
-}                         
+}

@@ -1,16 +1,19 @@
 using System;
 namespace IntroCS
 {
-   /// Quit Response 
+/// Quit Response
    public class Quitter : Response
    {
-      public string CommandName {get; private set;}
+      public string CommandName {
+         get;
+         private set;
+      }
 
       public Quitter()
       {
          CommandName = "quit";
       }
-   
+
       /// "Quit" was entered. Check the rest of the command to see
       /// whether we really quit the game.
       /// Return true, if this command quits the game, false otherwise.

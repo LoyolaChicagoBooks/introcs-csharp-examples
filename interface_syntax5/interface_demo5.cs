@@ -1,4 +1,4 @@
-﻿class InterfaceDemo5 : abc  
+﻿class InterfaceDemo5 : abc
 {
    public static void Main()
    {
@@ -6,13 +6,13 @@
       InterfaceDemo5 refDemo = new InterfaceDemo5();
       refDemo.xyz();
       Sample refSample = new Sample();
-      refSample.xyz();    
+      refSample.xyz();
    }
 
    public void xyz()
    {
       System.Console.WriteLine("In InterfaceDemo5 :: xyz");
-   }  
+   }
 }
 
 interface abc
@@ -25,19 +25,19 @@ class Sample : abc
    public void xyz()
    {
       System.Console.WriteLine("In Sample :: xyz");
-   }  
+   }
 }
 
 /*
 Now a second class, Sample, implementing interface abc is added,
 and we can create objects of both classes:
 
-refDemo is a reference to the object of class InterfaceDemo5. 
-refSample is a reference to the object of class Sample. 
+refDemo is a reference to the object of class InterfaceDemo5.
+refSample is a reference to the object of class Sample.
 
-Both the classes implement the interface abc, with their own separate 
-implementation of the function xyz(). 
-Functions xyz() of the respective classes InterfaceDemo5 and 
+Both the classes implement the interface abc, with their own separate
+implementation of the function xyz().
+Functions xyz() of the respective classes InterfaceDemo5 and
 Sample are invoked through references refDemo and refSample.
 
 Code modified from Chetan Kudalkar's article

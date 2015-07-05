@@ -9,9 +9,9 @@ class Return2
       return result;
    }
 
-    static void Main()
-    {
-        Console.WriteLine(LastFirst("Benjamin", "Franklin"));
-        Console.WriteLine(LastFirst("Andrew", "Harrington"));
-    }
+   static void Main()
+   {
+      Console.WriteLine(LastFirst("Benjamin", "Franklin"));
+      Console.WriteLine(LastFirst("Andrew", "Harrington"));
+   }
 }

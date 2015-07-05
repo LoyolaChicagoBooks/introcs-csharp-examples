@@ -2,14 +2,14 @@ using System;
 
 namespace IntroCS
 {
-   /// Class stub for fractions (rational numbers),
-   /// version including casts and a start at operator overloading
+/// Class stub for fractions (rational numbers),
+/// version including casts and a start at operator overloading
    public class Rational
-   {                          // INVARIENT:
+   {  // INVARIENT:
       private int num, denom; // denom > 0, fraction is reduced to lowest terms
 
       /// Parse a string of an integer, fraction (with /) or decimal (with .)
-      ///  and return the corresponding Rational. 
+      ///  and return the corresponding Rational.
       public static Rational Parse(string s)
       {
          s = s.Trim();
@@ -26,10 +26,10 @@ namespace IntroCS
             parts[1] = "1"+zeros;
          }
          return new Rational(int.Parse(parts[0].Trim()),
-            int.Parse(parts[1].Trim()));
+                             int.Parse(parts[1].Trim()));
       }
 
-      /// Create a fraction given numerator and denominator. 
+      /// Create a fraction given numerator and denominator.
       public Rational(int numerator, int denominator)
       {
          num = numerator;
@@ -50,7 +50,7 @@ namespace IntroCS
       /// Create a fraction for an integer value.
       public Rational(int wholeNumber):
       this(wholeNumber, 1)  // new syntax, before body, refers to
-      {                         // other constructor using name "this"
+      {  // other constructor using name "this"
       }
 
       /// Return a string of the fraction in lowest terms,
@@ -88,7 +88,7 @@ namespace IntroCS
 
       /// Force the invarient: in lowest terms with a positive denominator.
       private void normalize()
-      {                           
+      {
          if (denom == 0) { // We really should force an Exception, but we won't.
             Console.WriteLine("Zero denominator changed to 1!");
             denom = 1;
@@ -102,10 +102,10 @@ namespace IntroCS
          }
       }
 
-                                      // operator chunk
-      /// * binary multiplication operator 
+      // operator chunk
+      /// * binary multiplication operator
       public static Rational operator *(Rational f1, Rational f2)
-      {                          
+      {
          return new Rational(f1.num*f2.num, f1.denom*f2.denom);
       }
 
@@ -127,33 +127,33 @@ namespace IntroCS
          return f1.num != f2.num || f1.denom != f2.denom;
       } // or extra call, but clearly consistent: return !(f1 == f2)
 
-                                            // implicit cast chunk
-      /// Code to cast an int to a Rational implicitly when needed. 
+      // implicit cast chunk
+      /// Code to cast an int to a Rational implicitly when needed.
       public static implicit operator Rational(int n)
       {
          return new Rational(n, 1);
       }
-                                            // to double chunk
-      /// Code to cast to a double implicitly when needed. 
+      // to double chunk
+      /// Code to cast to a double implicitly when needed.
       public static implicit operator double(Rational f)
       {
          return (double)f.num/f.denom;
       }
-                                              // explicit cast chunk
-      /// Code to cast to a decimal with an explicit cast. 
+      // explicit cast chunk
+      /// Code to cast to a decimal with an explicit cast.
       public static explicit operator decimal(Rational f)
       {
          return (decimal)f.num/f.denom;
       }
-                                                 // end chunk
+      // end chunk
       /// / binary division operator
       public static Rational operator /(Rational f1, Rational f2)
-      {                                    
+      {
          return null; // FIX THIS CODE!
       }
 
       // NOW COMPLETELY CODE BINARY OPERATORS FOR +, -, <, >, <=, >=
       // ...
-     
+
    }
 }

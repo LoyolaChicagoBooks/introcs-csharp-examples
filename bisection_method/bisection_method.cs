@@ -28,23 +28,25 @@ namespace IntroCS
       }
 
       public override string ToString()
-      { 
+      {
          string s = "f(x) = ";
          int deg = coef.Length - 1;
          for (int i = 0; i < deg; i++)
             s += string.Format("{0}x^{1} + ", coef[i],  deg - i);
          return s + coef[deg];
-      }         
+      }
    }
 
    public class TrigSum : Function {
       public double f(double x) {
          return Math.Sin(x) - Math.Cos(x);
-         // This should have solution pi/4 
+         // This should have solution pi/4
       }
 
       public override string ToString()
-      { return "f(x) = sin x - cos x"; }         
+      {
+         return "f(x) = sin x - cos x";
+      }
    }
 
    class BisectionMethod
@@ -52,20 +54,20 @@ namespace IntroCS
 
       /// This is the basic bisection method.
       /// Ported straight from http://en.wikipedia.org/wiki/Bisection_method.
-      /// Source: Burden, Richard L.; Faires, J. Douglas (1985), 
+      /// Source: Burden, Richard L.; Faires, J. Douglas (1985),
       ///   "2.1 The Bisection Algorithm",
       /// Numerical Analysis (3rd ed.), PWS Publishers
-      public static double Bisection(Function F, double a, double b, 
+      public static double Bisection(Function F, double a, double b,
                                      double tolerance, int iterations) {
          // check the preconditions for the method to work
-         // a must be less than b so we can do the interval search 
+         // a must be less than b so we can do the interval search
          if( a >= b)
             return double.NaN;
          Console.WriteLine ("a >= b ok");
          bool ok = false;
 
-         // The function must cross the x-axis between the endpoints, 
-         //   meaning its sign changes. 
+         // The function must cross the x-axis between the endpoints,
+         //   meaning its sign changes.
          if (F.f(a) < 0 && F.f( b) > 0) {
             Console.WriteLine ("Test 1 passed");
             ok = true;
@@ -97,16 +99,16 @@ namespace IntroCS
       /// to a root of F.f.  Returns double.NaN if the F.f(a)*F.f(b) > 0.
       /// Does not require a < b.
       public static double Bisection(Function F, double a, double b) {
-         if( F.f(a) == 0) 
+         if( F.f(a) == 0)
             return a;
-         if( F.f(b) == 0) 
+         if( F.f(b) == 0)
             return b;
          if( Math.Sign(F.f( b)) == Math.Sign(F.f( a))) //or F.f(a)*F.f(b)>0
             return double.NaN;
          double c = (a + b) / 2;
-         // If no f(c) is exactly 0, iterate until the smallest possible 
+         // If no f(c) is exactly 0, iterate until the smallest possible
          // double interval, when there is no distinct double midpoint.
-         while (c != a && c != b) { 
+         while (c != a && c != b) {
             Console.WriteLine ("a = {0}  b= {1} diff = {2}", a, b, b-a);
             if( F.f(c) == 0) {
                return c;
@@ -123,18 +125,18 @@ namespace IntroCS
       public static void Main (string[] args)
       {
          Function p = new Polynomial(new double[] { 1, 0, -2 });
-         // This should have solution x = +/- square root of 2  
+         // This should have solution x = +/- square root of 2
          ShowBisection(p, 0, 2, .0001, 100);
          ShowBisection(p, 0, 1, .0001, 100);
          p = new Polynomial(new double[] { 1, -3, -3, 1 });
-         // This should have solution x = -1.  -1 - 3 + 3 + 1 = 0  
+         // This should have solution x = -1.  -1 - 3 + 3 + 1 = 0
          ShowBisection(p, -10.0, 10.0, .001, 10000);
 
-         ShowBisection(new TrigSum(), 0, 1, .00001, 100);  // pi / 4  
+         ShowBisection(new TrigSum(), 0, 1, .00001, 100);  // pi / 4
       }
 
       /// Shows parameters and both bisection functions.
-      static void ShowBisection(Function F, double a, double b, 
+      static void ShowBisection(Function F, double a, double b,
                                 double tolerance, int iterations)
       {
          Console.WriteLine("\nLet " + F);

@@ -11,7 +11,7 @@ class Birthday2
    }
 
    static void Main()
-   {   
+   {
       HappyBirthdayEmily();
       Console.WriteLine ("Hip hip hooray!");
       HappyBirthdayEmily();

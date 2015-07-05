@@ -8,7 +8,7 @@ namespace IntroCS
       static void Main()
       {
          string filename = UI.PromptLine(
-                            "Enter the name of a file of integers: ");
+                              "Enter the name of a file of integers: ");
          if (File.Exists(filename)) {
             Console.WriteLine("The sum is {0}", CalcSum(filename));
          }
@@ -18,8 +18,8 @@ namespace IntroCS
       }
 
       /// Read the named file and
-      /// return the sum of an int 
-      /// from each line that is not just white space. 
+      /// return the sum of an int
+      /// from each line that is not just white space.
       static int CalcSum(string filename)
       {
          int sum = 0;

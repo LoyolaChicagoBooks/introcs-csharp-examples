@@ -3,10 +3,10 @@
 namespace IntroCS
 {
    public class RemoveZeros
-   {            // nozeros chunk
+   {  // nozeros chunk
       /// Return a new array with all the 0's that are in
       /// data removed.  If data contains 0, 3, 0, 0, 5, 9
-      /// then an array containing 3, 5, 9 is returned. 
+      /// then an array containing 3, 5, 9 is returned.
       public static int[] NoZeros(int[] data)
       {
          int countNonZero = 0;
@@ -17,7 +17,7 @@ namespace IntroCS
          }
          int[] notzero = new int[countNonZero];
          int i = 0;  // index where to put the next value
-         foreach(int n in data) { 
+         foreach(int n in data) {
             if (n != 0) { // copy non-zero elements
                notzero[i] = n;
                i++;
@@ -25,7 +25,7 @@ namespace IntroCS
          }
          return notzero;
       }
-                                         ///main chunk                                   
+      ///main chunk
       public static void Main()
       {
          Console.WriteLine ("start:  0, 3, 0, 0, 5, 9, 0, 11");
@@ -35,5 +35,5 @@ namespace IntroCS
             Console.WriteLine (x);
          }
       }
-   }                                                    
+   }
 }

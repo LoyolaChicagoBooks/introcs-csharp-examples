@@ -1,4 +1,4 @@
-﻿class InterfaceDemo6 : abc  
+﻿class InterfaceDemo6 : abc
 {
    public static void Main()
    {
@@ -6,13 +6,13 @@
       abc refDemo = new InterfaceDemo6(); // note declared type!
       refDemo.xyz();
       abc refSample = new Sample();   // note declared type!
-      refSample.xyz();    
+      refSample.xyz();
    }
 
    public void xyz()
    {
       System.Console.WriteLine("In InterfaceDemo6 :: xyz");
-   }  
+   }
 }
 
 interface abc
@@ -25,7 +25,7 @@ class Sample : abc
    public void xyz()
    {
       System.Console.WriteLine("In Sample :: xyz");
-   }  
+   }
 }
 
 /*

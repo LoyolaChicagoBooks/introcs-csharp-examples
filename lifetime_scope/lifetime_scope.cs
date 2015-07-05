@@ -18,8 +18,8 @@ class LifetimeVsScope  // distinguish lifetime from scope
       Console.WriteLine("Still alive! {0} {1}", x, obj.instanceVar);
    }
 
-   static void ScopeHider()  
-   {  
-      Console.WriteLine("Neither x nor obj is in scope here."); 
+   static void ScopeHider()
+   {
+      Console.WriteLine("Neither x nor obj is in scope here.");
    }
 }

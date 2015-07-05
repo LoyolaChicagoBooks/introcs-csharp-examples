@@ -2,13 +2,16 @@ using System;
 using System.Collections.Generic;
 namespace IntroCS
 {
-   
-   /// Map commands names to commands.
+
+/// Map commands names to commands.
    public class CommandMapper
    {
-      public string AllCommands {get; private set;}
+      public string AllCommands {
+         get;
+         private set;
+      }
       private Dictionary<string, Response> responses; //responses to commands
-       
+
       /// Initialize the command response mapping
       ///  game The game being played.
       public CommandMapper(Game game)
@@ -26,14 +29,14 @@ namespace IntroCS
             AllCommands += r.CommandName + " ";
          }
       }
-   
-      /// Check whether aString is a valid command word. 
+
+      /// Check whether aString is a valid command word.
       /// Return true if it is, false if it isn't.
       public bool isCommand(string aString)
       {
          return responses.ContainsKey(aString);
       }
-   
+
       /// Return the command associated with a command word.
       ///  cmdWord The command word.
       /// Return the Response for the command.

@@ -2,22 +2,25 @@ using System;
 using System.Collections.Generic;
 namespace IntroCS
 {
-   
-   /// Help Response
+
+/// Help Response
    public class Helper : Response
    {
-      public string CommandName {get; private set;}
+      public string CommandName {
+         get;
+         private set;
+      }
       private CommandMapper commandMapper;
       private Dictionary<string, Response> responses;
 
       /// Print out some Help information.
-      /// Here we print some stupid, cryptic message and a list of the 
+      /// Here we print some stupid, cryptic message and a list of the
       /// command words.
       public bool Execute(Command cmd)
       {
          if (!cmd.hasSecondWord()) {
             Console.WriteLine(
-@"You are lost. You are alone.
+               @"You are lost. You are alone.
 You wander around at the university.
                              
 Your command words are:
@@ -30,10 +33,10 @@ Your command words are:
          }
          else {
             Console.WriteLine(
-@"Unknown command {0}!  Command words are
+               @"Unknown command {0}!  Command words are
     {1}", cmd.SecondWord, commandMapper.AllCommands);
          }
-            return false;
+         return false;
       }
 
       public string Help()
@@ -42,7 +45,7 @@ Your command words are:
     help command
 for help on the command.";
       }
-           
+
       /// Constructor for objects of class Helper
       public Helper(Dictionary<string, Response> responses,
                     CommandMapper commandMapper)

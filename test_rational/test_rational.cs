@@ -20,7 +20,7 @@ namespace IntroCS
          Console.WriteLine("{0} as a decimal is {1}", h, h.ToDecimal());
          foreach (string s in new[] {"-12/30", "123", "1.125"}) {
             Console.WriteLine("Parse \"{0}\" to Rational: {1}",
-                                        s, Rational.Parse(s));
+                              s, Rational.Parse(s));
          }
       }
    }

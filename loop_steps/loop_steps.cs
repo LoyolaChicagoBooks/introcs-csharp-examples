@@ -3,7 +3,7 @@
 class LoopSteps
 {
    static void Main()
-   { // play computer and predict what this loop does
+   {  // play computer and predict what this loop does
       string s = "abcd";
       int i = 1;
       while (i < 4) {

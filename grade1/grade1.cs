@@ -3,8 +3,8 @@ using System;
 namespace IntroCS
 {
    class Grade
-   {                        // function chunk
-      /// Return letter grade for score. 
+   {  // function chunk
+      /// Return letter grade for score.
       static char letterGrade(double score)
       {
          char letter;
@@ -12,7 +12,7 @@ namespace IntroCS
             letter = 'A';
          }
          else if (score >= 80) { // grade must be B, C, D or F
-           letter = 'B';
+            letter = 'B';
          }
          else if (score >= 70) { // grade must be C, D or F
             letter = 'C';
@@ -25,7 +25,7 @@ namespace IntroCS
          }
          return letter;
       }
-                           // end of function chunk
+      // end of function chunk
       static void Main()
       {
          double g = UIF.PromptDouble("Enter a numerical grade: ");

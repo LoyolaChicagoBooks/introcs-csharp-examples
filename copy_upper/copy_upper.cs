@@ -3,10 +3,10 @@ using System.IO;
 
 namespace IntroCS
 {
-   class CopyUpper  
-   {   
-      static void Main() 
-      {                                     //start chunk
+   class CopyUpper
+   {
+      static void Main()
+      {  //start chunk
          var reader = new StreamReader("text.txt");
          var writer = new StreamWriter("upper_text.txt");
          while (!reader.EndOfStream) {
@@ -14,8 +14,8 @@ namespace IntroCS
             writer.WriteLine(line.ToUpper());
          }
          reader.Close();
-         writer.Close();      
+         writer.Close();
       }                                    // end chunk
-   }                                                      
+   }
 }
 
