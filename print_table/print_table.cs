@@ -48,7 +48,8 @@ namespace IntroCS
             }
             Console.WriteLine("| " + format, rowSum[r]);
          }
-         Console.WriteLine(StringOfReps("-",(width+1)*(t.GetLength(1)+1) + 1));
+         string reps = StringOfReps("-",(width+1)*(t.GetLength(1)+1) + 1);
+         Console.WriteLine(reps);
          for (int c = 0; c < t.GetLength(1); c++) {
             Console.Write(format, colSum[c]);
          }
