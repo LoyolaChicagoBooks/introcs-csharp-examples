@@ -7,7 +7,7 @@ namespace IntroCS
       public static void Main()
       {  // demo chunk
          string input = UI.PromptLine(
-                           "Please enter integers, separated by spaces and/or comma: ");
+            "Please enter integers, separated by spaces and/or comma: ");
          int[] data = ExtractFromString.IntsFromString(input);
          for (int i=0; i < data.Length; i++) {
             Console.WriteLine("data[{0}]={1}", i, data[i]);
