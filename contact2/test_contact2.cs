@@ -20,7 +20,7 @@ namespace IntroCS
          c1.SetEmail("maria.ortiz@gmail.com");
          c2.SetPhone("123-456-7890");
          Contact c3 = new Contact("Amy Li", "847-111-2222",
-                                  "amy.li22@yahoo.com")
+                                  "amy.li22@yahoo.com");
          Console.WriteLine("With changes and added contact:");
          var allc = new List<Contact>(new Contact[] {c1, c2, c3});
          foreach(Contact c in allc) {
