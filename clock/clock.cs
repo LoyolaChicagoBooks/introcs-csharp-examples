@@ -39,7 +39,8 @@ namespace IntroCS
       /// Always 2 digits for both hours and minute with colon in middle
       public string GetTimeString()
       {
-         return string.Format("{0:D2}:{1:D2}", hours.GetCount(), minutes.GetCount());
-      }  // D2 format: always at least 2 digits, padding as needed with leading 0's
+         return string.Format("{0:D2}:{1:D2}",
+            hours.GetCount(), minutes.GetCount());
+      }
    }
 }
