@@ -7,7 +7,7 @@ namespace IntroCS
       public static void Main()
       {  // driver chunk
          string input = UI.PromptLine(
-                           "Please enter some comma/space separated integers: ");
+            "Please enter some comma/space separated integers: ");
          int[] data = ExtractFromString.IntsFromString(input);
          Sorting.IntArrayShellSortBetter(data);
          string prompt =

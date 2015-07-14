@@ -7,7 +7,7 @@ namespace IntroCS
    public class PerformanceLab
    {
       // chunk-experiment1-begin
-      public static long ExperimentIntArrayLinearSearch (int n, int rep, int seed)
+      public static long ExpIntArrayLinearSearch (int n, int rep, int seed)
       {
          Stopwatch watch = new Stopwatch ();
          int[] data = new int[n];
@@ -24,7 +24,7 @@ namespace IntroCS
       }
       // chunk-experiment1-end
 
-      public static long ExperimentIntArrayBinarySearch (int n, int rep, int seed)
+      public static long ExpIntArrayBinarySearch (int n, int rep, int seed)
       {
          Stopwatch watch = new Stopwatch ();
          int[] data = new int[n];
