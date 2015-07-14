@@ -5,6 +5,7 @@
 #  - Unbundles the NuGet.exe setup (no binary dependencies carried)
 #  - Verifies NuGet.exe dependencies are present
 #  - Discovers and runs our unit tests
+# Disabled for now: sh .ci/RunTests.sh 
 
 language: objective-c
 
@@ -25,7 +26,6 @@ before_install:
 
 script:
  - xbuild /verbosity:quiet
- - sh .ci/RunTests.sh 
 
 branches:
  only:
