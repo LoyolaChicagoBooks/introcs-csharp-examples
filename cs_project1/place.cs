@@ -39,7 +39,7 @@ namespace IntroCS
       ///   Remaining paragraph: place description, blank line terminated
       public static Dictionary<string, Place> createPlaces (string fileName)
       {
-         StreamReader reader = FIO.OpenReader(fileName);
+         StreamReader reader = new StreamReader(fileName);
          // Map to return
          Dictionary<string, Place> places = new Dictionary<string, Place> ();
 
