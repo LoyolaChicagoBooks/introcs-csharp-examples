@@ -1,2 +1,0 @@
-This program is writing
-our first file.

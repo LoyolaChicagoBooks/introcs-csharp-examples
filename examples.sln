@@ -272,6 +272,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interface_syntax8", "interf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example_class2", "example_class2\example_class2.csproj", "{190E3949-0F29-4674-B4C1-3B8795985D8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "traceback", "traceback\traceback.csproj", "{2222D0F0-C469-4BF0-807D-54E4D58C71CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -362,6 +364,10 @@ Global
 		{2114FB1E-64B3-402A-AE44-FEBA8FEC5FC2}.Debug|x86.Build.0 = Debug|x86
 		{2114FB1E-64B3-402A-AE44-FEBA8FEC5FC2}.Release|x86.ActiveCfg = Release|x86
 		{2114FB1E-64B3-402A-AE44-FEBA8FEC5FC2}.Release|x86.Build.0 = Release|x86
+		{2222D0F0-C469-4BF0-807D-54E4D58C71CF}.Debug|x86.ActiveCfg = Debug|x86
+		{2222D0F0-C469-4BF0-807D-54E4D58C71CF}.Debug|x86.Build.0 = Debug|x86
+		{2222D0F0-C469-4BF0-807D-54E4D58C71CF}.Release|x86.ActiveCfg = Release|x86
+		{2222D0F0-C469-4BF0-807D-54E4D58C71CF}.Release|x86.Build.0 = Release|x86
 		{22DF2563-14C7-4610-8AD7-0A6633712134}.Debug|x86.ActiveCfg = Debug|x86
 		{22DF2563-14C7-4610-8AD7-0A6633712134}.Debug|x86.Build.0 = Debug|x86
 		{22DF2563-14C7-4610-8AD7-0A6633712134}.Release|x86.ActiveCfg = Release|x86

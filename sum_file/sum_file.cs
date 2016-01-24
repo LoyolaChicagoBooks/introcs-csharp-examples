@@ -17,9 +17,9 @@ namespace IntroCS
          }
       }
 
-      /// Read the named file and
-      /// return the sum of an int
-      /// from each line that is not just white space.
+      /// Open, read and close the named file and
+      /// return the sum of an int from
+      /// each line that is not just white space.
       static int CalcSum(string filename)
       {
          int sum = 0;
